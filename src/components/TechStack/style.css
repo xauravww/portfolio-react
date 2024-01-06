@@ -1,0 +1,65 @@
+.container-tech {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1c1125;
+  border-top-left-radius: 100%;
+  position: relative;
+}
+body {
+  background-color: #1c1125;
+}
+
+.box {
+  background-color: var(--dark);
+  /* height: 30%; */
+  /* width: 60vw; */
+  margin: 0 auto;
+  padding: 0.5rem;
+  display: grid;
+  grid-gap: 0.2rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0 rgb(59, 52, 52);
+  z-index: 2;
+  /* transition: 0.5s all; */
+  /* perspective: 500px; */
+  transform: rotateX(45deg);
+  /* transform-origin: center; */
+}
+/* .box:hover {
+  transform: rotateY(30deg) rotateX(0deg);
+} */
+.container-tech .item {
+  /* width: 5em; */
+  height: 4em;
+  /* background-color: #021709; */
+  background-color: var(--light);
+  margin: 0.2rem;
+  color: black;
+  grid-auto-flow: dense;
+
+  display: flex;
+  align-items: center;
+  padding: 0.9rem;
+
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: space-evenly;
+}
+.container-tech .item img {
+  width: 1.9em;
+}
+
+.container-tech .pattern {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/pattern.png");
+  z-index: 1;
+  opacity: 0.1;
+  top: 0px;
+  bottom: 0;
+}

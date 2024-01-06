@@ -4,8 +4,9 @@
   height: 100px;
   align-items: center;
 
-  /* background-color: red; */
+  background-color: var(--dark);
   padding: 0.5rem 1rem;
+  z-index: 10s;
 }
 .navbar img {
   width: 75px;
@@ -23,7 +24,10 @@
 
 .nav-items a {
   text-decoration: none;
-  color: black;
+  color: white;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  /* font-size: 1.1rem; */
 }
 
 .li-item {
@@ -37,7 +41,8 @@
   content: "";
   height: 3px;
   width: 0%;
-  background-color: green;
+  background-color: white;
+  left: 0;
   bottom: -5px;
   transform-origin: left;
   transition: 0.3s all;

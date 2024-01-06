@@ -1,14 +1,20 @@
-import { useState } from "react"
-
-import "./App.css"
+// App.js
+import React, { useEffect, useRef } from "react"
+import { Route, Routes, useLocation } from "react-router-dom"
+import { HashLink as Link } from "react-router-hash-link"
 import Navbar from "./components/Navbar/Navbar"
 import Home from "./components/Home/Home"
-function App() {
+import TechStack from "./components/TechStack/TechStack"
+import ProjectOverview from "./components/ProjectOverview/ProjectOverview"
+
+const App = () => {
   return (
-    <>
+    <div>
       <Navbar />
-      <Home />
-    </>
+      <Home containerId="section1" />
+      <TechStack containerId="section2" />
+      <ProjectOverview containerId="section3" />
+    </div>
   )
 }
 

@@ -1,21 +1,52 @@
 import React from "react"
+// import { Link } from "react-router-dom"
+// import { HashLink as Link } from "react-router-hash-link"
+import { Link, animateScroll as scroll } from "react-scroll"
 import "./style.css"
 import saurav from "../../assets/saurav_professional.png"
+
 const Navbar = () => {
   return (
     <>
       <div className="navbar">
         <img src={saurav} alt="" />
         <ul className="nav-items">
-          <a href="" className="li-item">
-            <li>Home</li>
-          </a>
-          <a href="" className="li-item">
-            <li>About</li>
-          </a>
-          <a href="" className="li-item">
-            <li>Contact</li>
-          </a>
+          <li className="li-item">
+            <Link
+              activeClass="active"
+              to="section1"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              Home
+            </Link>
+          </li>
+          <li className="li-item">
+            <Link
+              activeClass="active"
+              to="section2"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              TechStack
+            </Link>
+          </li>
+          <li className="li-item">
+            <Link
+              activeClass="active"
+              to="section3"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              Project
+            </Link>
+          </li>
         </ul>
       </div>
     </>
