@@ -1,13 +1,35 @@
-import React from "react"
+import React, { useEffect } from "react"
 import "./style.css"
 import X from "../../assets/X.jpeg"
 import Linkedin from "../../assets/linkedin.png"
 import Showwcase from "../../assets/showwcase.png"
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/all"
 
-const Home = ({containerId}) => {
+const Home = ({ containerId }) => {
+  useEffect(() => {
+    gsap.from(".container .title-desc", {
+      duration: 1,
+      x: -100, 
+      opacity: 0, 
+      ease: "power2.out" 
+    })
+
+    gsap.to(".container .title-desc", {
+      duration: 1,
+      x: 0, 
+      opacity: 1, 
+      ease: "power2.in",
+      scrollTrigger: {
+        trigger: ".container",
+        start: "top center" 
+      }
+    })
+  }, [])
   return (
     <div className="container" id={containerId}>
       <div className="mask"></div>
+      <div className="pattern"></div>
       <div className="sidebar">
         <div>
           <img src={X} alt="" />
@@ -25,7 +47,7 @@ const Home = ({containerId}) => {
         Frontend of Websites and <span>Web Applications</span> that leads to the
         success of the overall product
       </p>
-      <button className="btn item">PROJECTS</button>
+      {/* <button className="btn item">PROJECTS</button> */}
     </div>
   )
 }

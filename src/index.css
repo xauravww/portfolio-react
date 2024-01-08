@@ -1,3 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Noto+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Genos:ital,wght@1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Lilita+One&family=Montserrat:wght@700&family=Noto+Sans&display=swap");
+
+@font-face {
+  font-family: Cyborg;
+  src: url("./assets/Cyborg-ZV7eq.ttf");
+}
 :root {
   --lightest: #bea1d4;
   --light: #9972b0;
@@ -6,27 +14,17 @@
   --creamy: #e3dcd5;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Noto+Sans&display=swap");
-@font-face {
-  font-family: Cyborg;
-  src: url("./assets/Cyborg-ZV7eq.ttf");
-}
-
 *,
 *::after,
 *::before {
   box-sizing: border-box;
-  font-family: "Cyborg", "Noto Sans", sans-serif;
+  font-family: "Noto Sans", sans-serif;
 
   margin: 0;
+  /* border: 2px solid red; */
   cursor: url("./assets/pointinghand.svg"), auto;
 }
-body,
-html {
-  height: 100%;
-  width: 100%;
-}
 
-/* body {
-  border: 10px solid rgb(6, 228, 117);
-} */
+* {
+  /* border: 1px solid red; */
+}

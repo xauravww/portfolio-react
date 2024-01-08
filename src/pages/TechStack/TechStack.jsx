@@ -16,7 +16,7 @@ import eight from "../../assets/techstack/8.png"
 import nine from "../../assets/techstack/9.png"
 import ten from "../../assets/techstack/10.png"
 
-const TechStack = ({containerId}) => {
+const TechStack = ({ containerId }) => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
 
@@ -25,55 +25,58 @@ const TechStack = ({containerId}) => {
     // Set up the scroll animation
     gsap.to(".box", {
       scrollTrigger: ".container-tech",
-      duration: 1.3,
+      duration: 4,
       rotationX: 0
     })
   }, [])
+
   return (
     <>
       <div className="container-tech" id={containerId}>
         <div className="pattern"></div>
+        <div className="mask"></div>
         <div className="box">
+          <div className="mask2"></div>
           <div className="item">
             <img src={one} alt="" />
-            HTML CSS
+            <div className="item-text">HTML CSS</div>
           </div>
           <div className="item">
             <img src={two} alt="" />
-            JavaScript
+            <div className="item-text">JavaScript</div>
           </div>
           <div className="item">
             <img src={three} alt="" />
-            ReactJs
+            <div className="item-text">ReactJs</div>
           </div>
           <div className="item">
             <img src={four} alt="" />
-            Kotlin
+            <div className="item-text">Kotlin</div>
           </div>
 
           <div className="item">
             <img src={five} alt="" />
-            MongoDB
+            <div className="item-text">MongoDB</div>
           </div>
           <div className="item">
             <img src={six} alt="" />
-            NodeJs
+            <div className="item-text">NodeJs</div>
           </div>
           <div className="item">
             <img src={seven} alt="" />
-            NodeJs
+            <div className="item-text">ExpressJs</div>
           </div>
           <div className="item">
             <img src={eight} alt="" />
-            C++
+            <div className="item-text">C++</div>
           </div>
           <div className="item">
             <img src={nine} alt="" />
-            Android
+            <div className="item-text">Android</div>
           </div>
           <div className="item">
             <img src={ten} alt="" />
-            XML
+            <div className="item-text">XML</div>
           </div>
         </div>
       </div>

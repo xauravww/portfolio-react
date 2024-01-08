@@ -9,7 +9,9 @@ const Navbar = () => {
   return (
     <>
       <div className="navbar">
-        <img src={saurav} alt="" />
+        <div className="circle">
+          <img src={saurav} alt="" />
+        </div>
         <ul className="nav-items">
           <li className="li-item">
             <Link
@@ -17,7 +19,7 @@ const Navbar = () => {
               to="section1"
               spy={true}
               smooth={true}
-              offset={-70}
+              offset={-100}
               duration={500}
             >
               Home
@@ -29,7 +31,7 @@ const Navbar = () => {
               to="section2"
               spy={true}
               smooth={true}
-              offset={-70}
+              offset={0}
               duration={500}
             >
               TechStack
@@ -41,7 +43,7 @@ const Navbar = () => {
               to="section3"
               spy={true}
               smooth={true}
-              offset={-70}
+              offset={0}
               duration={500}
             >
               Project

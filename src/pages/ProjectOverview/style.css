@@ -1,0 +1,168 @@
+.project-container {
+  height: 100vh;
+
+  background-image: url("../../assets/projects/pixtract_bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  position: relative;
+
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.project-container .wrapper {
+  width: 50%;
+
+  z-index: 4;
+}
+.project-container .project-counter {
+  z-index: 5;
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 1.6rem;
+}
+.project-container .prev-next-btns {
+  z-index: 5;
+
+  margin-top: 1.6rem;
+}
+.project-container .mask,
+.project-container .pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  z-index: 2;
+}
+
+.project-container .pattern {
+  width: 100%;
+  backdrop-filter: blur(10px);
+  background-image: url("../../assets/pattern2.png");
+  opacity: 0.3;
+  z-index: 3;
+}
+.project-container .toggle {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+
+  white-space: nowrap;
+}
+
+.project-container .toggle button {
+  border: none;
+  padding: 0.8em 0.6em;
+  outline: none;
+  transition: 0.5s all;
+}
+
+.project-container .toggle button:focus {
+  outline: 0 !important;
+  box-shadow: none;
+}
+
+/* When Projects Button is active */
+.project-container .toggle button.active {
+  background-color: #7d1ac0;
+  color: white;
+}
+
+.project-container .toggle button.active:nth-child(1) {
+  padding-left: 20px;
+}
+
+.project-container .toggle button:nth-child(2) {
+  padding-left: 20px;
+}
+
+.project-container .toggle button.active:nth-child(1):after {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 100%;
+  background-color: #7d1ac0;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.5s all;
+}
+
+/* When MiniProjects Button is active */
+.project-container .toggle button.active:nth-child(2) {
+  padding-right: 10px;
+}
+
+.project-container .toggle button:nth-child(1) {
+  padding-right: 20px;
+}
+
+.project-container .toggle button.active:nth-child(2):before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 100%;
+  background-color: #7d1ac0;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  top: 0;
+  right: calc(50% + 5px);
+  transition: 0.2s all;
+}
+
+@media screen and (max-width: 768px) {
+  .project-container .toggle {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 632px) {
+  .project-container .toggle {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .project-container .toggle {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .project-container .wrapper {
+    width: 20rem;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .project-container .wrapper {
+    width: 18rem;
+  }
+}
+
+@media screen and (max-width: 310px) {
+  .project-container .wrapper {
+    width: 12rem;
+  }
+}
