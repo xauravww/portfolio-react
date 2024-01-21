@@ -8,7 +8,7 @@ import saurav from "../../assets/saurav_professional.png"
 const Navbar = () => {
   return (
     <>
-      <div className="navbar">
+      <div className="navbar utility">
         <div className="circle">
           <img src={saurav} alt="" />
         </div>

@@ -1,95 +1,86 @@
 import React, { useEffect, useState } from "react"
-import "./style.css"
-import Project from "../../components/Project/Project"
-const ProjectOverview = ({ containerId }) => {
-  const PROJECT_DETAILS = [
-    {
-      id: "1",
-      img: "/src/assets/projects/pixtract_bg.png",
-      title: "Pixtract",
-      description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint autincidunt hic. Est, placeat tenetur? Mollitia repudiandae sit similique",
-      // techStacks: ["ReactJS", "Sanity CMS"],
-      techStacks: "ReactJS",
-      url: "https://pixtract.netlify.app"
-    }
-  ]
+import "./projectoverview.css"
 
-  const MINI_PROJECT_DETAILS = [
-    {
-      id: "1",
-      img: "/src/assets/projects/pixtract_bg.png",
-      title: "Birthday Reminder",
-      description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint autincidunt hic. Est, placeat tenetur? Mollitia repudiandae sit similique",
-      // techStacks: ["ReactJS", "Sanity CMS"],
-      techStacks: "ReactJS",
-      url: "https://pixtract.netlify.app"
-    }
-  ]
+import { PROJECT_DETAILS, MINI_PROJECT_DETAILS } from "../../utils/data"
+import ProjectItem from "../../components/ProjectItem/ProjectItem"
+
+const ProjectOverview = ({ containerId }) => {
   const [isActive, setIsActive] = useState(true)
-  const [countItem, setCountItem] = useState(0)
-  const [countIndex, setcountIndex] = useState(0)
-  useEffect(() => {
-    if (isActive) {
-      let length = PROJECT_DETAILS.length
-      setCountItem(length)
-    } else {
-      let length = MINI_PROJECT_DETAILS.length
-      setCountItem(length)
-    }
-  }, [isActive])
+
+  const [bgImg, setbgImg] = useState(PROJECT_DETAILS[0].img)
+  const [isSearchActive, setisSearchActive] = useState(false)
   return (
-    <div className="project-container" id={containerId}>
-      <div className="project-counter">Project {countItem}/ 100</div>
-      <div className="wrapper">
-        {isActive &&
-          PROJECT_DETAILS.map((item) => (
-            <>
-              <Project
-                key={item.id}
-                img={item.img}
-                title={item.title}
-                description={item.description}
-                techStacks={item.techStacks}
-                url={item.url}
-              />
-            </>
+    <div className="ProjectOverview" id={containerId}>
+      <div className="search-filter-toggle-wrapper">
+        {!isSearchActive && (
+          <div className="toggle-views-wrapper">
+            <button
+              className="toggle-btn active"
+              onClick={() => setIsActive(!isActive)}
+              style={
+                isActive
+                  ? {
+                      backgroundColor: "rgb(243, 216, 0)"
+                    }
+                  : { backgroundColor: "white" }
+              }
+            >
+              Projects
+            </button>
+            <button
+              className="toggle-btn"
+              onClick={() => setIsActive(!isActive)}
+              style={
+                isActive
+                  ? { backgroundColor: "white" }
+                  : { backgroundColor: "rgb(243, 216, 0)" }
+              }
+            >
+              Blogs
+            </button>
+          </div>
+        )}
+        {isSearchActive && (
+          <div className="input-wrapper">
+            <input type="text" className="search-input" />
+            <img
+              src="https://res.cloudinary.com/drvntsbpo/image/upload/v1705565883/cross_twmgud.svg"
+              alt="cross"
+              onClick={() => setisSearchActive(!isSearchActive)}
+            />
+          </div>
+        )}
+        <div className="search-filter-wrapper">
+          {!isSearchActive && (
+            <img
+              className="search"
+              src="https://res.cloudinary.com/drvntsbpo/image/upload/v1705839155/search-alt-2-svgrepo-com_urftri.svg"
+              alt=""
+              onClick={() => setisSearchActive(!isSearchActive)}
+            />
+          )}
+          <img
+            className="filter"
+            src="https://res.cloudinary.com/drvntsbpo/image/upload/v1705781444/filter-edit-svgrepo-com_ib6yzu.svg"
+            alt=""
+          />
+        </div>
+      </div>
+      {isActive && (
+        <div className="grid-container">
+          {PROJECT_DETAILS.map((item) => (
+            <ProjectItem
+              key={item.id}
+              img={item.img}
+              description={item.description}
+              techStacks={item.techStacks}
+              url={item.url}
+            />
           ))}
-        {!isActive &&
-          MINI_PROJECT_DETAILS.map((item) => (
-            <>
-              <Project
-                key={item.id}
-                img={item.img}
-                title={item.title}
-                description={item.description}
-                techStacks={item.techStacks}
-                url={item.url}
-              />
-            </>
-          ))}
-      </div>
-      <div className="prev-next-btns">
-        <button>Prev</button>
-        <button>next</button>
-      </div>
-      <div className="mask"></div>
-      <div className="pattern"></div>
-      <div className="toggle">
-        <button
-          className={isActive ? "active" : ""}
-          onClick={() => setIsActive(!isActive)}
-        >
-          Projects
-        </button>
-        <button
-          className={isActive ? "" : "active"}
-          onClick={() => setIsActive(!isActive)}
-        >
-          MiniProjects
-        </button>
-      </div>
+        </div>
+      )}
+      <div className="mask-projectoverview"></div>
+      <div className="pattern-projectoverview"></div>
     </div>
   )
 }

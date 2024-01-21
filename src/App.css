@@ -4,6 +4,6 @@ html {
   width: 100%;
 }
 
-/* body {
-  border: 10px solid rgb(6, 228, 117);
-} */
+* {
+  /* border: 1px solid red; */
+}

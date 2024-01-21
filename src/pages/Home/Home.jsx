@@ -10,19 +10,19 @@ const Home = ({ containerId }) => {
   useEffect(() => {
     gsap.from(".container .title-desc", {
       duration: 1,
-      x: -100, 
-      opacity: 0, 
-      ease: "power2.out" 
+      x: -100,
+      opacity: 0,
+      ease: "power2.out"
     })
 
     gsap.to(".container .title-desc", {
       duration: 1,
-      x: 0, 
-      opacity: 1, 
+      x: 0,
+      opacity: 1,
       ease: "power2.in",
       scrollTrigger: {
         trigger: ".container",
-        start: "top center" 
+        start: "top center"
       }
     })
   }, [])
@@ -43,9 +43,9 @@ const Home = ({ containerId }) => {
       </div>
       <h1 className="title item">HEY, I'M SAURAV MAHESHWARI</h1>
       <p className="title-desc item">
-        A <span>Frontend</span> focused <span>Web Developer</span> building the
-        Frontend of Websites and <span>Web Applications</span> that leads to the
-        success of the overall product
+        A <span>FullStack Web Developer</span> building the Websites and{" "}
+        <span>Web Applications</span> that leads to the success of the overall
+        product
       </p>
       {/* <button className="btn item">PROJECTS</button> */}
     </div>

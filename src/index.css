@@ -18,13 +18,61 @@
 *::after,
 *::before {
   box-sizing: border-box;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Genos", "Noto Sans", sans-serif;
 
   margin: 0;
   /* border: 2px solid red; */
   cursor: url("./assets/pointinghand.svg"), auto;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+/*
+::-webkit-scrollbar-thumb {
+  background-color: var(--dark);
+}
+*/
 * {
   /* border: 1px solid red; */
 }
+
+/* .utility {
+  width: 1536px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border: 1px solid red;
+}
+
+@media (min-width: 1536px) {
+  .utility {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1280px) {
+  .utility {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1024px) {
+  .utility {
+    max-width: 768px;
+  }
+}
+@media (min-width: 768px) {
+  .utility {
+    max-width: 640px;
+  }
+}
+@media (min-width: 640px) {
+  .utility {
+    max-width: 475px;
+  }
+}
+@media (min-width: 475px) {
+  .utility {
+    width: 100%;
+  }
+} */
