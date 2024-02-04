@@ -1,15 +1,15 @@
 // App.js
 import React from "react"
 
-import Navbar from "./components/Navbar/Navbar"
-import Home from "./pages/Home/Home"
-import TechStack from "./pages/TechStack/TechStack"
-import ProjectOverview from "./pages/ProjectOverview/ProjectOverview"
-import "./App.css"
-import ProjectItem from "./components/ProjectItem/ProjectItem"
+import Navbar from "./components/Navbar"
+import Home from "./pages/Home"
+import TechStack from "./pages/TechStack"
+import ProjectOverview from "./pages/ProjectOverview"
+// import "./App.css"
+import ProjectItem from "./components/ProjectItem"
 const App = () => {
   return (
-    <div>
+    <div className="App  bg-position-center relative ">
       <Navbar />
       <Home containerId="section1" />
       <TechStack containerId="section2" />

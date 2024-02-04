@@ -14,10 +14,13 @@ export const PROJECT_DETAILS = [
     img: "https://res.cloudinary.com/drvntsbpo/image/upload/v1704802069/assets/projects/portfolio_bg_uoxyxc.png",
     title: "Portfolio Website",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint autincidunt hic. Est, placeat tenetur? Mollitia repudiandae sit similique",
-    // techStacks: ["ReactJS", "Sanity CMS"],
-    techStacks: "ReactJS",
-    url: "https://pixtract.netlify.app"
+      "This is my personal portfolio website that is responsive, containing all my projects, blogs, my tech stacks, and an 'About Me' section",
+
+    techStacks: ["ReactJS", "Tailwind CSS"],
+    url: {
+      github: "https://github.com/xauravww/portfolio-react",
+      live: "https://xauravww.netlify.app"
+    }
   },
   {
     id: "3",

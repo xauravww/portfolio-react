@@ -2,6 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Genos:ital,wght@1,200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Lilita+One&family=Montserrat:wght@700&family=Noto+Sans&display=swap");
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
   font-family: Cyborg;
   src: url("./assets/Cyborg-ZV7eq.ttf");
@@ -21,9 +25,13 @@
   font-family: "Genos", "Noto Sans", sans-serif;
 
   margin: 0;
-  /* border: 2px solid red; */
-  cursor: url("./assets/pointinghand.svg"), auto;
+  /* border: 1px solid red; */
+  /* cursor: url("./assets/pointinghand.svg"), auto; */
 }
+
+/* body {
+  border: 5px solid red;
+} */
 
 body::-webkit-scrollbar {
   display: none;
@@ -75,4 +83,12 @@ body::-webkit-scrollbar {
   .utility {
     width: 100%;
   }
+} */
+
+/* .utility {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 } */
