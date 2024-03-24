@@ -52,6 +52,19 @@ const Navbar = () => {
               Project
             </Link>
           </div>
+          <div className="overlay-item text-white ">
+            <Link
+              activeClass="active"
+              to="section4"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+              onClick={() => setHamburgerActive(false)}
+            >
+              About
+            </Link>
+          </div>
         </div>
       )}
       <div className="navbar px-8  py-2 h-[4rem]   flex justify-between items-center bg-[#46285a] w-full ">

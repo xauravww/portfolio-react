@@ -38,22 +38,22 @@ const Home = ({ containerId }) => {
       <div className="pattern absolute top-0 left-0 h-full w-full   bg-[url('../public/assets/pattern2.png')] z-[1] backdrop-blur bg-cover bg-position-center "></div>
       <div className="sidebar-wrapper absolute top-0 left-0 h-full w-1/6 z-50 flex flex-col justify-center items-center lg:w-[6vw] ">
         <div className="sidebar flex flex-col justify-center items-center gap-1   border-2 border-black p-1 bg-black-opacity-50 backdrop-blur-sm bg-slate-400/50 rounded-md lg:gap-2 lg:p-2">
-          <div>
-            <img className={sidebarImgCSS} src={X} alt="" />
+          <div onClick={()=>window.open("https://x.com/savvyyww", "_blank")}>
+            <img className={sidebarImgCSS} src={X} alt=""  />
           </div>
-          <div>
+          <div onClick={()=>window.open("https://www.linkedin.com/in/itsmesaurav", "_blank")}>
             <img className={sidebarImgCSS} src={Linkedin} alt="" />
           </div>
-          <div>
+          <div onClick={()=>window.open("https://www.showwcase.com/xauravww", "_blank")}> 
             <img className={sidebarImgCSS} src={Showwcase} alt="" />
           </div>
         </div>
       </div>
-      <h1 className="title item px-2  text-5xl text-center text-slate-300 font-extrabold z-10 md:text-6xl md:px-10 md:py-4 lg:text-7xl z-[5] w-5/6 md:w-4/6 lg:w-3/6">
+      <h1 className="title item px-2 text-4xl text-center text-slate-300 font-extrabold z-10 md:text-6xl md:px-10 md:py-4 lg:text-7xl z-[5] w-5/6 md:w-4/6 lg:w-3/6">
         HEY, I'M SAURAV MAHESHWARI
       </h1>
-      <p className="title-desc item text-center text-slate-300  my-1 px-20 text-3xl md: my-5 text-4xl lg:text-5xl lg:px-40 z-[5] w-5/6 ">
-      Turning <span className={spanTextCSS}>ideas</span> into interactive <span className={spanTextCSS}>experiences</span>  – where innovation meets interaction
+      <p className="title-desc item text-center text-slate-300  my-1 px-10 text-4xl md: my-5 md:text-5xl lg:text-5xl lg:px-40 z-[5] w-5/6 ">
+      Turning <span className={spanTextCSS}>ideas</span> into interactive <span className={spanTextCSS}>experiences</span> where innovation meets interaction
       </p>
       {/* <button className="btn item">PROJECTS</button> */}
     </div>

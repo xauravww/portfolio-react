@@ -5,9 +5,9 @@ const ProjectItem = ({ img, description, techStacks, url }) => {
   const repo = url.repo
   const live = url.live
   return (
-    <div className="project-item-container z-[7] bg-white rounded-md shadow-md relative h-[20vw]" onMouseEnter={() => sethoverItem(true)} onMouseLeave={() => sethoverItem(false)}>
+    <div className="project-item-container z-[7] bg-white rounded-md shadow-md relative h-[50vw] lg:h-[20vw]" onMouseEnter={() => sethoverItem(true)} onMouseLeave={() => sethoverItem(false)}>
       <img className="project-item-img rounded-t-md h-full object-cover" src={img} alt="" />
-   <div className="wrapper-description-and-btns absolute inset-x-0 bottom-0 bg-slate-300 ease-in duration-300" >
+   <div className="wrapper-description-and-btns absolute inset-x-0 bottom-0 bg-slate-100 ease-in duration-300" >
    {hoverItem && (
         <div className="project-item-description p-4 ">
           {description.length > 100

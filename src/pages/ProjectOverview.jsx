@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react"
 
-import { PROJECT_DETAILS, MINI_PROJECT_DETAILS } from "../utils/data"
+import { PROJECT_DETAILS } from "../utils/data"
 import ProjectItem from "../components/ProjectItem"
+import Pagination from "../components/Pagination"
 
 const ProjectOverview = ({ containerId }) => {
   const [isActive, setIsActive] = useState(true)
@@ -9,9 +10,51 @@ const ProjectOverview = ({ containerId }) => {
   const [bgImg, setbgImg] = useState(PROJECT_DETAILS[0].img)
   const [isSearchActive, setisSearchActive] = useState(false)
 
+
   const whiteColorFilter =
     "invert(99%) sepia(1%) saturate(7473%) hue-rotate(186deg) brightness(116%) contrast(86%)"
 
+
+
+
+  const [currentPage, setcurrentPage] = useState(1)
+  const [postPerPage, setpostPerPage] = useState(4)
+  const lastPageIndex = currentPage * postPerPage
+  const firstPageIndex = lastPageIndex - postPerPage
+  const currentPost = PROJECT_DETAILS.slice(firstPageIndex, lastPageIndex)
+
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+
+      if (width < 768) {
+
+        setpostPerPage(2)
+
+      } else if (width >= 768 && width < 1024) {
+
+        setpostPerPage(2)
+
+      } else if (width >= 1024) {
+
+        setpostPerPage(4)
+
+      }
+    };
+
+
+    handleResize();
+
+
+    window.addEventListener("resize", handleResize);
+
+
+    return () => {
+
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <div
       className="ProjectOverview h-screen relative bg-[#46285a] flex flex-col justify-center "
@@ -26,8 +69,8 @@ const ProjectOverview = ({ containerId }) => {
               style={
                 isActive
                   ? {
-                      backgroundColor: "rgb(243, 216, 0)"
-                    }
+                    backgroundColor: "rgb(243, 216, 0)"
+                  }
                   : { backgroundColor: "white" }
               }
             >
@@ -84,7 +127,7 @@ const ProjectOverview = ({ containerId }) => {
         </div>
       </div>
       <div
-        className="projects-wrapper z-[6]  mt-6 overflow-y-scroll h-[70vh]  rounded-md p-4 m-6"
+        className="projects-wrapper z-[6]  mt-6 overflow-y-scroll h-[60vh]  rounded-md p-4 m-6"
         style={{
           scrollbarColor: "rgb(243, 216, 0) transparent",
           scrollbarWidth: "5px",
@@ -93,8 +136,8 @@ const ProjectOverview = ({ containerId }) => {
         }}
       >
         {isActive && (
-          <div className="grid-container grid grid-cols-1 z-[5] md:grid-cols-2 lg:grid-cols-3 gap-10  ">
-            {PROJECT_DETAILS.map((item) => (
+          <div className="grid-container grid grid-cols-1 z-[5] md:grid-cols-2 lg:grid-cols-4 gap-10  ">
+            {currentPost.map((item) => (
               <ProjectItem
                 key={item.id}
                 img={item.img}
@@ -103,8 +146,13 @@ const ProjectOverview = ({ containerId }) => {
                 url={item.url}
               />
             ))}
+
           </div>
         )}
+
+      </div>
+      <div className="z-[5]">
+        <Pagination totalPosts={PROJECT_DETAILS.length} postPerPage={postPerPage} setcurrentPage={setcurrentPage} currentPage={currentPage} />
       </div>
       <div className="mask-projectoverview absolute top-0 left-0 h-full w-full   bg-[rgba(0,0,0,0.6)] z-[2]"></div>
       <div className="pattern-projectoverview  absolute top-0 left-0 h-full w-full   bg-[url('../public/assets/pattern2.png')] z-[1] backdrop-blur bg-cover bg-position-center"></div>

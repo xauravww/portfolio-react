@@ -14,7 +14,9 @@ import seven from "../assets/techstack/7.png"
 import eight from "../assets/techstack/8.png"
 import nine from "../assets/techstack/9.png"
 import ten from "../assets/techstack/10.png"
-
+import reactnativeicon from '../../public/assets/react-native.png'
+import tailwind from '../../public/assets/tailwind.png'
+import postman from '../../public/assets/postman.png'
 import useSound from 'use-sound';
 import hoverSound from '../../public/assets/pop.mp3'
 const TechStack = ({ containerId }) => {
@@ -113,6 +115,18 @@ const TechStack = ({ containerId }) => {
           </div>
           <div className="item"  >
             <img src={ten} className={techStackItemsCss} alt="" onMouseEnter={handleHover}
+        onMouseLeave={handleMouseLeave} />
+          </div>
+          <div className="item"  >
+            <img src={reactnativeicon} className={techStackItemsCss} alt="" onMouseEnter={handleHover}
+        onMouseLeave={handleMouseLeave} />
+          </div>
+          <div className="item"  >
+            <img src={tailwind} className={techStackItemsCss} alt="" onMouseEnter={handleHover}
+        onMouseLeave={handleMouseLeave} />
+          </div>
+          <div className="item"  >
+            <img src={postman} className={techStackItemsCss} alt="" onMouseEnter={handleHover}
         onMouseLeave={handleMouseLeave} />
           </div>
         </div>
