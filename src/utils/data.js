@@ -7,7 +7,10 @@ export const PROJECT_DETAILS = [
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint autincidunt hic. Est, placeat tenetur? Mollitia repudiandae sit similique",
     // techStacks: ["ReactJS", "Sanity CMS"],
     techStacks: "ReactJS",
-    url: "https://pixtract.netlify.app"
+    url: {
+      repo:"https://github.com/xauravww/pixtract",
+      live:"https://pixtract.netlify.app"
+    }
   },
   {
     id: "2",
@@ -18,8 +21,8 @@ export const PROJECT_DETAILS = [
 
     techStacks: ["ReactJS", "Tailwind CSS"],
     url: {
-      github: "https://github.com/xauravww/portfolio-react",
-      live: "https://xauravww.netlify.app"
+      repo: "https://github.com/xauravww/portfolio-react",
+      live: "https://portfolio-react-lpfc.onrender.com/"
     }
   },
   {
@@ -37,20 +40,26 @@ export const PROJECT_DETAILS = [
     img: "https://res.cloudinary.com/drvntsbpo/image/upload/v1704802058/assets/projects/piano_bg_cbvm09.png",
     title: "Midi Piano",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint autincidunt hic. Est, placeat tenetur? Mollitia repudiandae sit similique",
+      "A simple Piano that can be played using keyboard keys. (works on ONLY PC)",
     // techStacks: ["ReactJS", "Sanity CMS"],
     techStacks: "Vanilla Js",
-    url: "https://pixtract.netlify.app"
+    url: {
+      repo:"https://github.com/xauravww/practiceWEB/tree/learn-js/mini-projects/adv-midi-piano-miniproject",
+      live:"https://adv-midi-piano-miniproject.onrender.com/"
+    }
   },
   {
     id: "5",
     img: "https://res.cloudinary.com/drvntsbpo/image/upload/v1704802062/assets/projects/clock_bg_l9alsk.png",
     title: "Analog Clock",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint autincidunt hic. Est, placeat tenetur? Mollitia repudiandae sit similique",
+      "This is a simple and elegant project showcases a basic analog clock.",
     // techStacks: ["ReactJS", "Sanity CMS"],
     techStacks: "Vanilla Js",
-    url: "https://pixtract.netlify.app"
+    url: {
+      live:"https://analog-clock-xauravww.onrender.com/",
+      repo:"https://github.com/xauravww/practiceWEB/tree/learn-js/mini-projects/analog-clock-mini-project"
+    }
   },
 
   {

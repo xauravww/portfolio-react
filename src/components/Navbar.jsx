@@ -3,7 +3,7 @@ import React, { useState } from "react"
 // import { HashLink as Link } from "react-router-hash-link"
 import { Link, animateScroll as scroll } from "react-scroll"
 // import "./style.css"
-import saurav from "../assets/saurav_professional.png"
+import saurav from "../assets/saurav_professional.webp"
 import hamburger from "../../public/assets/hamburger.svg"
 const Navbar = () => {
   const [HamburgerActive, setHamburgerActive] = useState(false)
@@ -98,6 +98,18 @@ const Navbar = () => {
               duration={500}
             >
               Project
+            </Link>
+          </li>
+          <li className={`li-item relative ${navItemAfterHoverCSS}`}>
+            <Link
+              activeClass="active"
+              to="section4"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
+              About
             </Link>
           </li>
         </ul>

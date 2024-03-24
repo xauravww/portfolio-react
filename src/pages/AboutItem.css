@@ -1,0 +1,135 @@
+.About {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+  
+    background-color: #e6e6e6;
+  }
+  
+  .header {
+    font-size: 5vw;
+    font-weight: bold;
+    position: relative;
+  }
+  .header::after {
+    position: absolute;
+    content: "";
+    width: 60%;
+    height: 0.5vw;
+    background-color: black;
+    bottom: -1vw;
+    left: 50%;
+  
+    transform: translate(-50%, -50%);
+  }
+  
+  .grid-container {
+    margin-top: 4vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-rows: repeat(2, 1fr); */
+    gap: 1vw;
+  
+    width: 100%;
+  }
+  
+  .btn-wrapper {
+    margin: 1vw 3vw;
+  }
+  
+  .experience-btn {
+    /* background-color: black; */
+    /* color: white; */
+  
+    padding: 1vw 3vw;
+    font-size: 2.5vw;
+    font-weight: bold;
+    margin-top: 1vw;
+  }
+  .experience-btn:hover {
+    border-left: 4px solid #333333;
+  }
+  
+  .info-wrapper {
+    /* padding: 1vw 3vw; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+  }
+  
+  .school-name {
+    padding: 1vw 3vw;
+    font-size: 3.5vw;
+  }
+  
+  .class-name-wrapper {
+    display: flex;
+    padding: 0 3vw;
+  }
+  
+  .class-name {
+    font-size: 2.5vw;
+    background-color: #333333;
+    color: white;
+    padding: 0.5vw;
+    border-radius: 10px;
+  }
+  
+  .time {
+    padding: 1vw 3vw;
+    font-size: 2vw;
+    color: #757272;
+    font-weight: 700;
+  }
+  
+  .marks {
+    padding: 0vw 3vw;
+    font-size: 2vw;
+  }
+  
+  @media (max-width: 991.98px) {
+    .App {
+      /* height: auto; */
+    }
+  
+    .experience-btn {
+      font-size: 4vw;
+    }
+    .school-name {
+      font-size: 4vw;
+    }
+    .class-name {
+      font-size: 2.5vw;
+      padding: 0.6vw 2vw;
+      border-radius: 5px;
+    }
+    .info-wrapper {
+      /* padding: 1vw 2vw; */
+    }
+    .time {
+      font-size: 2.5vw;
+    }
+    .marks {
+      font-size: 2.5vw;
+    }
+  }
+  
+  @media (max-width: 575.98px) {
+    .experience-btn {
+      font-size: 4.5vw;
+    }
+  
+    .school-name {
+      font-size: 4.5vw;
+    }
+    .class-name {
+      font-size: 4vw;
+    }
+    .time,
+    .marks {
+      font-size: 3.5vw;
+    }
+  }

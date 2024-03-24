@@ -93,7 +93,7 @@ const ProjectOverview = ({ containerId }) => {
         }}
       >
         {isActive && (
-          <div className="grid-container grid grid-cols-1 z-[5] h-50  md:grid-cols-2 lg:grid-cols-3 gap-10  ">
+          <div className="grid-container grid grid-cols-1 z-[5] md:grid-cols-2 lg:grid-cols-3 gap-10  ">
             {PROJECT_DETAILS.map((item) => (
               <ProjectItem
                 key={item.id}
@@ -106,7 +106,7 @@ const ProjectOverview = ({ containerId }) => {
           </div>
         )}
       </div>
-      <div className="mask-projectoverview absolute top-0 left-0 h-full w-full   bg-[rgba(0,0,0,0.8)] z-[2]"></div>
+      <div className="mask-projectoverview absolute top-0 left-0 h-full w-full   bg-[rgba(0,0,0,0.6)] z-[2]"></div>
       <div className="pattern-projectoverview  absolute top-0 left-0 h-full w-full   bg-[url('../public/assets/pattern2.png')] z-[1] backdrop-blur bg-cover bg-position-center"></div>
     </div>
   )
