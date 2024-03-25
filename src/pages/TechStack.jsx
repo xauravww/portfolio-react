@@ -17,6 +17,9 @@ import ten from "../assets/techstack/10.png"
 import reactnativeicon from '../../public/assets/react-native.png'
 import tailwind from '../../public/assets/tailwind.png'
 import postman from '../../public/assets/postman.png'
+import reduxToolkit from '../../public/assets/redux-toolkit.png'
+import typescript from '../../public/assets/typescript.png'
+import graphql from '../../public/assets/graphql.png'
 import useSound from 'use-sound';
 import hoverSound from '../../public/assets/pop.mp3'
 const TechStack = ({ containerId }) => {
@@ -127,6 +130,18 @@ const TechStack = ({ containerId }) => {
           </div>
           <div className="item"  >
             <img src={postman} className={techStackItemsCss} alt="" onMouseEnter={handleHover}
+        onMouseLeave={handleMouseLeave} />
+          </div>
+          <div className="item"  >
+            <img src={reduxToolkit} className={techStackItemsCss} alt="" onMouseEnter={handleHover}
+        onMouseLeave={handleMouseLeave} />
+          </div>
+          <div className="item"  >
+            <img src={typescript} className={techStackItemsCss} alt="" onMouseEnter={handleHover}
+        onMouseLeave={handleMouseLeave} />
+          </div>
+          <div className="item"  >
+            <img src={graphql} className={techStackItemsCss} alt="" onMouseEnter={handleHover}
         onMouseLeave={handleMouseLeave} />
           </div>
         </div>

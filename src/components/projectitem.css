@@ -1,0 +1,10 @@
+.wrapper-description-and-btns {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+  
+  .wrapper-description-and-btns.show {
+    opacity: 1;
+    visibility: visible;
+  }

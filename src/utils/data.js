@@ -83,6 +83,17 @@ export const PROJECT_DETAILS = [
       live:"https://color-shader-xauravww.onrender.com",
       repo:"https://github.com/xauravww/practiceWEB/tree/react-projects/04-color-shades-generator"
     }
+  },
+  {
+    id: "9",
+    img: "https://res.cloudinary.com/drvntsbpo/image/upload/v1711396632/grocery-bud_mlfowb.webp",
+    description:
+      "This project is a simple todo list named 'Grocery Bud' that allows users to add, edit, mark as done, and delete grocery items",
+    techStacks: ["ReactJS","Tailwind CSS","Redux-Toolkit"],
+    url: {
+      live:"https://grocery-bud-xauravww.onrender.com/",
+      repo:"https://github.com/xauravww/practiceWEB/tree/react-projects/09-grocery-bud"
+    }
   }
 ]
 
