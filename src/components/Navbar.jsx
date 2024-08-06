@@ -49,7 +49,20 @@ const Navbar = () => {
               duration={500}
               onClick={() => setHamburgerActive(false)}
             >
-              Project
+              Projects
+            </Link>
+          </div>
+          <div className="overlay-item text-white ">
+            <Link
+              activeClass="active"
+              to="section5"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+              onClick={() => setHamburgerActive(false)}
+            >
+              Blogs
             </Link>
           </div>
           <div className="overlay-item text-white ">
@@ -111,7 +124,19 @@ const Navbar = () => {
               offset={0}
               duration={500}
             >
-              Project
+              Projects
+            </Link>
+          </li>
+          <li className={`li-item relative ${navItemAfterHoverCSS}`}>
+            <Link
+              activeClass="active"
+              to="section5"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
+              Blogs
             </Link>
           </li>
           <li className={`li-item relative ${navItemAfterHoverCSS}`}>

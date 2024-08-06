@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import X from "../assets/X.jpeg";
-import Linkedin from "../assets/linkedin.png";
-import Showwcase from "../assets/showwcase.png";
+import X from "/assets/X.jpeg";
+import Linkedin from "/assets/linkedin.png";
+import Showwcase from "/assets/showwcase.png";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 

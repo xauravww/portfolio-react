@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar"
 import Home from "./pages/Home"
 import TechStack from "./pages/TechStack"
 import ProjectOverview from "./pages/ProjectOverview"
+import Blogs from "./pages/Blogs"
 // import "./App.css"
 
 import About from "./pages/About"
@@ -16,6 +17,7 @@ const App = () => {
       <Home containerId="section1" />
       <TechStack containerId="section2" />
       <ProjectOverview containerId="section3" />
+      <Blogs containerId="section5" />
       <About containerId="section4" />
 
       {/* <ProjectItem /> */}

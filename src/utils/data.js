@@ -1,12 +1,21 @@
-export const PROJECT_DETAILS = [
+export const PROJECT_DETAILS = [ {
+  id: "10",
+  img: "https://res.cloudinary.com/drvntsbpo/image/upload/v1722943455/brcmeduconmerge_oeppji.png",
+  description:
+    "A college managment Android App with features like managing students, attendance, and etc.",
+  techStacks: ["React Native","Express.js","MongoDB","Tailwind CSS"],
+  url: {
+   
+    repo:"https://github.com/xauravww/brcmeducon-cross-platform",
+  }
+},
   {
     id: "1",
-    img: "https://res.cloudinary.com/drvntsbpo/image/upload/v1720960021/rupaysavvy_m23ssy.webp",
+    img: "https://res.cloudinary.com/drvntsbpo/image/upload/v1722942562/rupay-savvy_uxyfs5.webp",
     title: "Rupay Savvy",
     description:
       "This project is a user-friendly affiliate blogging website built with ReactJS, utilizing Notion as a CMS for backend management. It offers helpful product reviews and recommendations with a responsive design for easy use on any device.",
-    // techStacks: ["ReactJS", "Sanity CMS"],
-    techStacks: "React, NotionDB",
+    techStacks: ["ReactJS", "NotionDB","Express.js","Node.js"],
     url: {
       repo:"https://github.com/xauravww/affiliate-blogging",
       live:"https://rupaysavvy.in"
@@ -18,8 +27,8 @@ export const PROJECT_DETAILS = [
     title: "Pixtract",
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint autincidunt hic. Est, placeat tenetur? Mollitia repudiandae sit similique",
-    // techStacks: ["ReactJS", "Sanity CMS"],
-    techStacks: "ReactJS",
+    techStacks: ["ReactJS", "Sanity CMS"],
+    // techStacks: "ReactJS",
     url: {
       repo:"https://github.com/xauravww/pixtract",
       live:"https://pixtract.netlify.app"
@@ -44,8 +53,7 @@ export const PROJECT_DETAILS = [
     title: "Birthday Reminder",
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint autincidunt hic. Est, placeat tenetur? Mollitia repudiandae sit similique",
-    // techStacks: ["ReactJS", "Sanity CMS"],
-    techStacks: "ReactJS",
+    techStacks: ["ReactJS"],
     url: "https://pixtract.netlify.app"
   },
   {
@@ -54,8 +62,8 @@ export const PROJECT_DETAILS = [
     title: "Midi Piano",
     description:
       "A simple Piano that can be played using keyboard keys. (works on ONLY PC)",
-    // techStacks: ["ReactJS", "Sanity CMS"],
-    techStacks: "VanillaJs",
+    
+    techStacks: ["VanillaJs"],
     url: {
       repo:"https://github.com/xauravww/practiceWEB/tree/learn-js/mini-projects/adv-midi-piano-miniproject",
       live:"https://adv-midi-piano-miniproject.onrender.com/"
@@ -67,8 +75,8 @@ export const PROJECT_DETAILS = [
     title: "Analog Clock",
     description:
       "This is a simple and elegant project showcases a basic analog clock.",
-    // techStacks: ["ReactJS", "Sanity CMS"],
-    techStacks: "VanillaJs",
+    techStacks: ["VanillaJs"],
+    
     url: {
       live:"https://analog-clock-xauravww.onrender.com/",
       repo:"https://github.com/xauravww/practiceWEB/tree/learn-js/mini-projects/analog-clock-mini-project"
@@ -81,8 +89,8 @@ export const PROJECT_DETAILS = [
     title: "Form Validation MiniProject",
     description:
       "is designed to validate user input in real-time and display error messages if any of the validation criteria are not met. The form includes fields for a username, password, and confirmation of the password, along with a checkbox for accepting terms and conditions.",
-    // techStacks: ["ReactJS", "Sanity CMS"],
-    techStacks: "VanillaJs",
+    techStacks: ["ReactJS", "Sanity CMS"],
+    // techStacks: "VanillaJs",
     url: "https://xauravww-form-validation.netlify.app"
   },
   {
@@ -91,7 +99,7 @@ export const PROJECT_DETAILS = [
     title: "Color Shade Generator",
     description:
       "Using this you can Generate Color shades from any type of color format",
-    techStacks: "ReactJS",
+    techStacks: ["ReactJS"],
     url: {
       live:"https://color-shader-xauravww.onrender.com",
       repo:"https://github.com/xauravww/practiceWEB/tree/react-projects/04-color-shades-generator"
@@ -107,6 +115,7 @@ export const PROJECT_DETAILS = [
       live:"https://grocery-bud-xauravww.onrender.com/",
       repo:"https://github.com/xauravww/practiceWEB/tree/react-projects/09-grocery-bud"
     }
-  }
+  },
+ 
 ]
 

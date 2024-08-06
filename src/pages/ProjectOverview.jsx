@@ -44,73 +44,10 @@ const ProjectOverview = ({ containerId }) => {
       className="ProjectOverview h-screen relative bg-[#46285a] flex flex-col justify-center items-center"
       id={containerId}
     >
-      <div className="search-filter-toggle-wrapper flex justify-center items-center relative p-4 z-[5]">
-        {!isSearchActive && (
-          <div className="toggle-views-wrapper flex justify-center items-center relative   ">
-            <button
-              className="toggle-btn active text-black cursor-pointer p-2 font-bold text-xl"
-              onClick={() => setIsActive(!isActive)}
-              style={
-                isActive
-                  ? {
-                      backgroundColor: "rgb(243, 216, 0)",
-                    }
-                  : { backgroundColor: "white" }
-              }
-            >
-              Projects
-            </button>
-            <button
-              className="toggle-btn text-black cursor-pointer  p-2 font-bold text-xl"
-              onClick={() => setIsActive(!isActive)}
-              style={
-                isActive
-                  ? { backgroundColor: "white" }
-                  : { backgroundColor: "rgb(243, 216, 0)" }
-              }
-            >
-              Blogs
-            </button>
-          </div>
-        )}
-        {isSearchActive && (
-          <div className="input-wrapper flex justify-center items-center  w-[80vw] mr-14 relative ">
-            <input
-              type="text"
-              className="search-input w-full h-16  p-2 rounded-md outline-none text-2xl"
-              placeholder="Search"
-            />
-            <img
-              className="cross cursor-pointer w-5 h-5 absolute right-5 top-50"
-              src="https://res.cloudinary.com/drvntsbpo/image/upload/v1705565883/cross_twmgud.svg"
-              alt="cross"
-              onClick={() => setisSearchActive(!isSearchActive)}
-            />
-          </div>
-        )}
-        {/* Commented out search and filter , for future purposes */}
-        {/* <div className="search-filter-wrapper flex justify-center items-center absolute top-50 right-0 mr-4 z-[7]  rounded-md p-2">
-          {!isSearchActive && (
-            <img
-              className="search cursor-pointer w-10 "
-              src="https://res.cloudinary.com/drvntsbpo/image/upload/v1705839155/search-alt-2-svgrepo-com_urftri.svg"
-              alt=""
-              onClick={() => setisSearchActive(!isSearchActive)}
-              style={{
-                filter: whiteColorFilter
-              }}
-            />
-          )}
-          <img
-            className="filter cursor-pointer w-10"
-            style={{
-              filter: whiteColorFilter
-            }}
-            src="https://res.cloudinary.com/drvntsbpo/image/upload/v1705781444/filter-edit-svgrepo-com_ib6yzu.svg"
-            alt=""
-          />
-        </div> */}
-      </div>
+       <header className="text-3xl md:text-5xl text-white font-bold relative z-[3] text-center px-4">
+        Projects
+        <div className="underline-below-header absolute w-3/5 h-1 bg-white bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+      </header>
       <div
         className="projects-wrapper z-[6]  mt-6 overflow-y-auto h-[60vh]  rounded-md p-4 m-6"
         style={{
@@ -120,15 +57,8 @@ const ProjectOverview = ({ containerId }) => {
           zIndex: 10,
         }}
       >
-        {!isActive && (
-          <div className="blog-content bg-[rgb(70,40,90)] h-1/2 w-96 flex flex-col items-center justify-center text-2xl text-white text-center">
-            Integration Coming Soon...<br />
-            For now Visit my blog directly!
-            <a href="https://xauravww.hashnode.dev" className="underline">Blog Link</a>
-          </div>
-        )}
         {isActive && (
-          <div className="grid-container grid grid-cols-1 z-[5] md:grid-cols-2 lg:grid-cols-3 gap-10  ">
+          <div className="grid-container grid grid-cols-1 z-[5] md:grid-cols-2 lg:grid-cols-3 gap-10 ">
             {currentPost.map((item) => (
               <ProjectItem
                 key={item.id}
