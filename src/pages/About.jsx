@@ -19,7 +19,7 @@ function About({ containerId }) {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-[rgb(70,40,90)] relative" id={containerId}>
-      <div className="pattern2 absolute top-0 left-0 right-0 h-full w-full bg-[url('../public/assets/pattern2.png')] z-[1] backdrop-blur bg-fixed bg-center bg-norepeat- bg-cover"></div>
+      <div className="pattern2 absolute top-0 left-0 right-0 h-full w-full bg-[url('/assets/pattern2.png')] z-[1] backdrop-blur bg-fixed bg-center bg-norepeat- bg-cover"></div>
       <div className="mask absolute top-0 left-0 h-full w-full bg-[rgba(0,0,0,0.6)] z-[2]"></div>
       <header className="text-3xl md:text-5xl text-white font-bold relative z-[3] text-center px-4">
         Education

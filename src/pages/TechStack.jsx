@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import useSound from 'use-sound';
-import hoverSound from '../../public/assets/pop.mp3';
+import hoverSound from '/assets/pop.mp3';
 
 
-import techStackData from '../../public/assets/techstackdata.json';
+import techStackData from '../assets/techstackdata.json';  
+
 
 const TechStack = ({ containerId }) => {
   const [isButtonHovered, setIsButtonHovered] = useState(false);
@@ -49,7 +50,7 @@ const TechStack = ({ containerId }) => {
       id={containerId}
     >
     
-      <div className="pattern2 absolute top-0 left-0 right-0 h-full w-full bg-[url('../public/assets/pattern2.png')] z-[1] backdrop-blur bg-fixed bg-center bg-norepeat- bg-cover"></div>
+      <div className="pattern2 absolute top-0 left-0 right-0 h-full w-full bg-[url('/assets/pattern2.png')] z-[1] backdrop-blur bg-fixed bg-center bg-norepeat- bg-cover"></div>
      
       <div className="mask absolute top-0 left-0 h-full w-full bg-[rgba(0,0,0,0.6)] z-[2] "></div>
       <div

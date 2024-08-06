@@ -4,7 +4,7 @@ import  { useState } from "react"
 import { Link} from "react-scroll"
 // import "./style.css"
 // import saurav from "../assets/saurav_professional.webp"
-import hamburger from "../../public/assets/arrow_down.png"
+import hamburger from "/assets/arrow_down.png"
 const Navbar = () => {
   const [HamburgerActive, setHamburgerActive] = useState(false)
   const navItemAfterHoverCSS =

@@ -2,17 +2,16 @@ import PropTypes from 'prop-types';
 import { useState } from "react";
 
 const techStackImages = {
-  "React Native": "../../public/assets/react-native.png",
-  "Express.js": "../../public/assets/techstack/express-js.webp",
-  "MongoDB": "../../public/assets/techstack/mongodb.png",
-  "Tailwind CSS": "../../public/assets/tailwind.png",
-  "ReactJS": "../../public/assets/techstack/react.png",
-  "React Native": "../../public/assets/techstack/react-native.png",
-  "NotionDB": "../../public/assets/techstack/notion.png", 
-  "Sanity CMS": "../../public/assets/techstack/sanity.png", 
-  "VanillaJs": "../../public/assets/techstack/js.png",
-  "Node.js": "../../public/assets/techstack/nodejs.png",
-  "Redux-Toolkit": "../../public/assets/techstack/redux-toolkit.png",
+  "Express.js": "/assets/techstack/express-js.webp",
+  "MongoDB": "/assets/techstack/mongodb.png",
+  "Tailwind CSS": "/assets/tailwind.png",
+  "ReactJS": "/assets/techstack/react.png",
+  "React Native": "/assets/techstack/react-native.png",
+  "NotionDB": "/assets/techstack/notion.png", 
+  "Sanity CMS": "/assets/techstack/sanity.png", 
+  "VanillaJs": "/assets/techstack/js.png",
+  "Node.js": "/assets/techstack/nodejs.png",
+  "Redux-Toolkit": "/assets/techstack/redux-toolkit.png",
   
 };
 

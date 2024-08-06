@@ -34,9 +34,9 @@ const Home = ({ containerId }) => {
       className="container-home h-[calc(100vh-4rem)] flex flex-col justify-center items-center relative z-1"
       id={containerId}
     >
-      <div className="bg absolute top-0 left-0 h-full w-full bg-[url('../public/assets/bg.webp')] z-4 bg-cover bg-center"></div>
+      <div className="bg absolute top-0 left-0 h-full w-full bg-[url('/assets/bg.webp')] z-4 bg-cover bg-center"></div>
       <div className="mask absolute top-0 left-0 h-full w-full bg-[rgba(0,0,0,0.7)] z-[2]"></div>
-      <div className="pattern2 absolute top-0 left-0 right-0 h-full w-full bg-[url('../public/assets/pattern2.png')] z-[1] backdrop-blur bg-fixed bg-center bg-norepeat- bg-cover"></div>
+      <div className="pattern2 absolute top-0 left-0 right-0 h-full w-full bg-[url('/assets/pattern2.png')] z-[1] backdrop-blur bg-fixed bg-center bg-norepeat- bg-cover"></div>
       <div className="sidebar-wrapper absolute top-0 left-0 h-full w-1/6 z-50 flex flex-col justify-center items-center lg:w-[6vw]">
         <div className="sidebar flex flex-col justify-center items-center gap-1 border-2 border-black p-1 bg-black-opacity-50 backdrop-blur-sm bg-slate-400/50 rounded-md lg:gap-2 lg:p-2">
           <div onClick={() => window.open("https://x.com/savvyyww", "_blank")}>
