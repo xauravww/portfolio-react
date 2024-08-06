@@ -18,7 +18,7 @@ const DATA = [
       class: "B.Tech CSE",
       school: "BRCM College Of Engineering and Technology , Bahal , Haryana",
       time: "December 2020 - Present",
-      marks: "Marks - 8.7 SGPA"
+      marks: "Marks - 80.18 %"
     }
   ]
   

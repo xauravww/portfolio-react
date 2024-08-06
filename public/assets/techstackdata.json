@@ -1,0 +1,19 @@
+[
+    { "src": "assets/techstack/1.png", "alt": "Tech 1" },
+    { "src": "assets/techstack/2.png", "alt": "Tech 2" },
+    { "src": "assets/techstack/3.png", "alt": "Tech 3" },
+    { "src": "assets/techstack/4.png", "alt": "Tech 4" },
+    { "src": "assets/techstack/5.png", "alt": "Tech 5" },
+    { "src": "assets/techstack/6.png", "alt": "Tech 6" },
+    { "src": "assets/techstack/7.png", "alt": "Tech 7" },
+    { "src": "assets/techstack/8.png", "alt": "Tech 8" },
+    { "src": "assets/techstack/9.png", "alt": "Tech 9" },
+    { "src": "assets/techstack/10.png", "alt": "Tech 10" },
+    { "src": "assets/react-native.png", "alt": "React Native" },
+    { "src": "assets/tailwind.png", "alt": "Tailwind" },
+    { "src": "assets/postman.png", "alt": "Postman" },
+    { "src": "assets/redux-toolkit.png", "alt": "Redux Toolkit" },
+    { "src": "assets/typescript.png", "alt": "TypeScript" },
+    { "src": "assets/graphql.png", "alt": "GraphQL" }
+  ]
+  

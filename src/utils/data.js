@@ -1,6 +1,19 @@
 export const PROJECT_DETAILS = [
   {
     id: "1",
+    img: "https://res.cloudinary.com/drvntsbpo/image/upload/v1720960021/rupaysavvy_m23ssy.webp",
+    title: "Rupay Savvy",
+    description:
+      "This project is a user-friendly affiliate blogging website built with ReactJS, utilizing Notion as a CMS for backend management. It offers helpful product reviews and recommendations with a responsive design for easy use on any device.",
+    // techStacks: ["ReactJS", "Sanity CMS"],
+    techStacks: "React, NotionDB",
+    url: {
+      repo:"https://github.com/xauravww/affiliate-blogging",
+      live:"https://rupaysavvy.in"
+    }
+  },
+  {
+    id: "2",
     img: "https://res.cloudinary.com/drvntsbpo/image/upload/v1704802065/assets/projects/pixtract_bg_xrwjvk.png",
     title: "Pixtract",
     description:
@@ -13,7 +26,7 @@ export const PROJECT_DETAILS = [
     }
   },
   {
-    id: "2",
+    id: "3",
     img: "https://res.cloudinary.com/drvntsbpo/image/upload/v1704802069/assets/projects/portfolio_bg_uoxyxc.png",
     title: "Portfolio Website",
     description:
@@ -26,7 +39,7 @@ export const PROJECT_DETAILS = [
     }
   },
   {
-    id: "3",
+    id: "4",
     img: "https://res.cloudinary.com/drvntsbpo/image/upload/v1704802049/assets/projects/reminder_bg_yricbb.png",
     title: "Birthday Reminder",
     description:
@@ -36,7 +49,7 @@ export const PROJECT_DETAILS = [
     url: "https://pixtract.netlify.app"
   },
   {
-    id: "4",
+    id: "5",
     img: "https://res.cloudinary.com/drvntsbpo/image/upload/v1704802058/assets/projects/piano_bg_cbvm09.png",
     title: "Midi Piano",
     description:
@@ -49,7 +62,7 @@ export const PROJECT_DETAILS = [
     }
   },
   {
-    id: "5",
+    id: "6",
     img: "https://res.cloudinary.com/drvntsbpo/image/upload/v1704802062/assets/projects/clock_bg_l9alsk.png",
     title: "Analog Clock",
     description:
