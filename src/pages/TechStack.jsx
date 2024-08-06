@@ -6,7 +6,7 @@ import useSound from 'use-sound';
 import hoverSound from '../../public/assets/pop.mp3';
 
 
-import techStackData from '../../public/assets/techStackData.json';
+import techStackData from '../../public/assets/techstackdata.json';
 
 const TechStack = ({ containerId }) => {
   const [isButtonHovered, setIsButtonHovered] = useState(false);
