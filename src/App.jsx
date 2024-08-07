@@ -8,7 +8,8 @@ import ProjectOverview from "./pages/ProjectOverview"
 import Blogs from "./pages/Blogs"
 // import "./App.css"
 
-import About from "./pages/About"
+import Education from "./pages/Education"
+import ContactMe from "./pages/ContactMe.jsx"
 
 const App = () => {
   return (
@@ -18,7 +19,8 @@ const App = () => {
       <TechStack containerId="section2" />
       <ProjectOverview containerId="section3" />
       <Blogs containerId="section5" />
-      <About containerId="section4" />
+      <Education containerId="section4" />
+      <ContactMe containerId="section6" />
 
       {/* <ProjectItem /> */}
     </div>

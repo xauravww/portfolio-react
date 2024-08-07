@@ -27,7 +27,7 @@ const ProjectOverview = ({ containerId }) => {
       } else if (width >= 768 && width < 1024) {
         setpostPerPage(2);
       } else if (width >= 1024) {
-        setpostPerPage(6);
+        setpostPerPage(3);
       }
     };
 

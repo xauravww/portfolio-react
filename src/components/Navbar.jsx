@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <div className="nav-container  relative">
       {HamburgerActive && (
-        <div className="nav-overlay absolute  top-0  w-full   bg-black  z-50 flex flex-col items-center py-16 text-3xl  md:hidden">
+        <div className="nav-overlay absolute  top-0  w-full   bg-[#000] border-[#46285a] shadow-[0px_0px_50px_-30px_rgba(255,255,255,.6)]  z-50 flex flex-col items-center py-16 text-3xl  md:hidden">
           <div className="overlay-item text-white">
             <Link
               activeClass="active"
@@ -75,12 +75,25 @@ const Navbar = () => {
               duration={500}
               onClick={() => setHamburgerActive(false)}
             >
-              About
+              Education
+            </Link>
+          </div>
+          <div className="overlay-item text-white ">
+            <Link
+              activeClass="active"
+              to="section6"
+              spy={true}
+              smooth={true}
+              offset={35}
+              duration={500}
+              onClick={() => setHamburgerActive(false)}
+            >
+              Contact
             </Link>
           </div>
         </div>
       )}
-      <div className="navbar px-8  py-2 h-[4rem]   flex justify-center items-center bg-[rgb(71,36,95)] w-full ">
+      <div className="navbar px-8  py-2 h-[4rem]   flex justify-center items-center bg-[rgb(71,36,95)] w-full">
       {/* commented out navbar logo img*/}
         {/* <div className="circle h-[3.5em] w-[3.5em] border-2 border-white rounded-full relative md:h-[3.9em] md:w-[3.9em]">
           <img
@@ -90,7 +103,7 @@ const Navbar = () => {
             draggable="false"
           />
         </div> */}
-        <ul className="nav-items hidden md:flex gap-4 text-white px-4 py-2 cursor-pointer relative text-xl md:text-2xl ">
+        <ul className="nav-items hidden md:flex gap-4 text-white px-4 py-2 cursor-pointer relative text-xl md:text-3xl ">
           <li className={`li-item relative ${navItemAfterHoverCSS}`}>
             <Link
               activeClass="active"
@@ -148,7 +161,19 @@ const Navbar = () => {
               offset={0}
               duration={500}
             >
-              About
+              Education
+            </Link>
+          </li>
+          <li className={`li-item relative ${navItemAfterHoverCSS}`}>
+            <Link
+              activeClass="active"
+              to="section6"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
+              Contact
             </Link>
           </li>
         </ul>
