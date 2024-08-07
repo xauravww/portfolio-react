@@ -43,7 +43,7 @@ const ProjectItem = ({ img, description, techStacks = [], url }) => {
                   className="rounded-full border-2 border-white"
                   src={techStackImages[tech] || 'default-image-path.png'} // Replace with a default image path if needed
                   alt={tech}
-                  style={{ width: `${30 - index * 4}px`, height: `${30 - index * 4}px`, zIndex: techStacks.length - index }}
+                  style={{ width: `${30}px`, height: `${30}px`, zIndex: techStacks.length - index,margin:"-7px",backgroundColor: "black" }}
                 />
               ))}
             </div>
