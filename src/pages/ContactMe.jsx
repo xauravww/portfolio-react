@@ -126,13 +126,13 @@ const ContactMe = ({ containerId }) => {
             {/* for large screens */}
             <div className="hidden sidebar-wrapper absolute top-[32vw] left-8 h-full z-50 flex flex-col justify-center items-center lg:block lg:w-[3vw] scale-150">
                 <div className="sidebar flex flex-col justify-center items-center gap-1 border-2 border-black p-1 bg-black-opacity-50 backdrop-blur-sm bg-slate-400/50 rounded-md lg:gap-2 lg:p-2">
-                    <div onClick={() => window.open("https://x.com/savvyyww", "_blank")}>
+                    <div onClick={() => window.open(`${import.meta.env.VITE_X_URL}`, "_blank")}>
                         <img className={sidebarImgCSS} src={X} alt="X" />
                     </div>
-                    <div onClick={() => window.open("https://www.linkedin.com/in/itsmesaurav", "_blank")}>
+                    <div onClick={() => window.open(`${import.meta.env.VITE_LINKEDIN_URL}`, "_blank")}>
                         <img className={sidebarImgCSS} src={Linkedin} alt="LinkedIn" />
                     </div>
-                    <div onClick={() => window.open("https://www.showwcase.com/xauravww", "_blank")}>
+                    <div onClick={() => window.open(`${import.meta.env.VITE_SHOWWCASE_URL}`, "_blank")}>
                         <img className={sidebarImgCSS} src={Showwcase} alt="Showwcase" />
                     </div>
                 </div>
