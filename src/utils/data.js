@@ -1,4 +1,5 @@
 export const PROJECT_DETAILS = [ {
+  title:"BRCM Educon - Android App",
   id: "10",
   img: "https://res.cloudinary.com/drvntsbpo/image/upload/v1722943455/brcmeduconmerge_oeppji.png",
   description:
@@ -12,7 +13,7 @@ export const PROJECT_DETAILS = [ {
   {
     id: "1",
     img: "https://res.cloudinary.com/drvntsbpo/image/upload/v1722942562/rupay-savvy_uxyfs5.webp",
-    title: "Rupay Savvy",
+    title: "Rupay Savvy - Affiliate Blogging Platform",
     description:
       "This project is a user-friendly affiliate blogging website built with ReactJS, utilizing Notion as a CMS that offers helpful product reviews. ",
     techStacks: ["ReactJS", "NotionDB","Express.js","Node.js"],
@@ -77,6 +78,7 @@ export const PROJECT_DETAILS = [ {
   {
     id: "9",
     img: "https://res.cloudinary.com/drvntsbpo/image/upload/v1711396632/grocery-bud_mlfowb.webp",
+    title: "Grocery Bud - TODO List",
     description:
       "This miniproject is a simple todo list that was made to showcase my understanding of React and Redux Toolkit.",
     techStacks: ["ReactJS","Tailwind CSS","Redux-Toolkit"],

@@ -55,7 +55,7 @@ const ProjectItem = ({ img, description, techStacks = [], url ,projectTitle }) =
               ))}
             </div>
             <div className="text-sm md:text-3xl mb-4">{projectTitle}</div>
-            <p className="text-[#cccccc] font-oregano text-sm md:text-2xl mb-4">{description}</p>
+            <p className="text-[#cccccc] font-oregano text-sm md:text-2xl mb-4">{description.length>100?`${description.slice(0,100)}...`:description}</p>
             <div className="flex gap-2">
               {repo && (
                 <img
