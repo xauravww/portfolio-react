@@ -14,7 +14,7 @@ export const PROJECT_DETAILS = [ {
     img: "https://res.cloudinary.com/drvntsbpo/image/upload/v1722942562/rupay-savvy_uxyfs5.webp",
     title: "Rupay Savvy",
     description:
-      "This project is a user-friendly affiliate blogging website built with ReactJS, utilizing Notion as a CMS for backend management. It offers helpful product reviews and recommendations with a responsive design for easy use on any device.",
+      "This project is a user-friendly affiliate blogging website built with ReactJS, utilizing Notion as a CMS that offers helpful product reviews. ",
     techStacks: ["ReactJS", "NotionDB","Express.js","Node.js"],
     url: {
       repo:"https://github.com/xauravww/affiliate-blogging",
@@ -55,7 +55,7 @@ export const PROJECT_DETAILS = [ {
     img: "https://res.cloudinary.com/drvntsbpo/image/upload/v1723032640/form_s39len.webp",
     title: "Form Validation MiniProject",
     description:
-      "is designed to validate user input in real-time and display error messages if any of the validation criteria are not met. The form includes fields for a username, password, and confirmation of the password, along with a checkbox for accepting terms and conditions.",
+      "This miniproject is designed to validate user input in real-time and display error messages if any of the validation criteria are not met.",
     techStacks: ["VanillaJs"],
     url: {
       live: "https://xauravww-form-validation.netlify.app"
@@ -66,7 +66,7 @@ export const PROJECT_DETAILS = [ {
     img: "https://camo.githubusercontent.com/cb75a91054198ca8c82680750eb5e31024874d36cf0526c517e51215008995b8/68747470733a2f2f7265732e636c6f7564696e6172792e636f6d2f6472766e747362706f2f696d6167652f75706c6f61642f76313730353736353831312f416e696d6174696f6e5f663577626a662e77656270",
     title: "Color Shade Generator",
     description:
-      "Using this you can Generate Color shades from any type of color format",
+      "This miniproject lets you can Generate color shades from any type of color format",
     techStacks: ["ReactJS"],
     url: {
       live:"https://color-shader-xauravww.onrender.com",
@@ -78,7 +78,7 @@ export const PROJECT_DETAILS = [ {
     id: "9",
     img: "https://res.cloudinary.com/drvntsbpo/image/upload/v1711396632/grocery-bud_mlfowb.webp",
     description:
-      "This project is a simple todo list named 'Grocery Bud' that allows users to add, edit, mark as done, and delete grocery items",
+      "This miniproject is a simple todo list that was made to showcase my understanding of React and Redux Toolkit.",
     techStacks: ["ReactJS","Tailwind CSS","Redux-Toolkit"],
     url: {
       live:"https://grocery-bud-xauravww.onrender.com/",

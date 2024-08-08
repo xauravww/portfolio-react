@@ -8,6 +8,7 @@ import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+
 const ContactMe = ({ containerId }) => {
     const sidebarImgCSS = "sidebar-img w-16 hover:scale-125";
     const [formData, setFormData] = useState({
@@ -48,9 +49,10 @@ const ContactMe = ({ containerId }) => {
 
     return (
         <div
-            className="ContactMe h-screen relative bg-[#46285a] flex flex-col justify-evenly items-center overflow-hidden"
+            className="ContactMe min-h-screen relative bg-gradient-to-r from-[#2a1836] to-[#150c1b] flex flex-col justify-evenly items-center overflow-hidden"
             id={containerId}
         >
+    
             <header className="text-3xl md:text-5xl text-white font-bold relative z-[3] text-center px-4">
                 Contact Me
                 <div className="underline-below-header absolute w-3/5 h-1 bg-white bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
@@ -61,7 +63,7 @@ const ContactMe = ({ containerId }) => {
             <div className="main-content bg-[#000] border-[#46285a] scale-95 shadow-[0px_0px_50px_-30px_rgba(255,255,255,.6)] p-4 flex flex-col items-center justify-center w-[90vw] lg:w-[30vw] text-2xl text-white text-center z-[3]">
                 <form onSubmit={handleSubmit} className="space-y-6 w-full">
                     <div className="flex flex-col">
-                        <label htmlFor="name" className="text-3xl font-medium mb-2">Name</label>
+                        <label htmlFor="name" className="text-2xl lg:text-2xl font-medium mb-2">Name</label>
                         <input
                             type="text"
                             id="name"
@@ -69,12 +71,13 @@ const ContactMe = ({ containerId }) => {
                             value={formData.name}
                             onChange={handleChange}
                             required
+                            maxLength={"30"}
                             className="text-black p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
                     </div>
 
                     <div className="flex flex-col">
-                        <label htmlFor="email" className="text-3xl font-medium mb-2">Email</label>
+                        <label htmlFor="email" className="text-2xl lg:text-2xl font-medium mb-2">Email</label>
                         <input
                             type="email"
                             id="email"
@@ -83,11 +86,12 @@ const ContactMe = ({ containerId }) => {
                             onChange={handleChange}
                             required
                             className="text-black p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            maxLength={"50"}
                         />
                     </div>
 
                     <div className="flex flex-col">
-                        <label htmlFor="query" className="text-3xl font-medium mb-2">Message</label>
+                        <label htmlFor="query" className="text-2xl lg:text-2xl font-medium mb-2">Message</label>
                         <textarea
                             id="query"
                             name="query"
@@ -95,13 +99,14 @@ const ContactMe = ({ containerId }) => {
                             onChange={handleChange}
                             required
                             rows="4"
+                            maxLength={"500"}
                             className="text-black resize-none p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
                     </div>
 
                     <button
                         type="submit"
-                        className={`bg-[#f3d800] text-black py-3 px-6 rounded-lg shadow-md hover:bg-[#f8e866] focus:outline-none focus:ring-2  $loader-active:scale-125 transition duration-300 ease-in-out`}
+                        className={`bg-[#f3d800] text-black py-3 px-6 rounded-lg shadow-md hover:bg-[#f8e866] focus:outline-none focus:ring-2  $loader-active:scale-125 transition duration-300 ease-in-out scale-75 lg:scale-100`}
                     >
                         {loader? "Sending..." : "Submit"  }
                     </button>
@@ -110,21 +115,21 @@ const ContactMe = ({ containerId }) => {
 
             {/* for small screens and medium */}
             <div className="sidebar-wrapper z-50 lg:hidden">
-                <div className="sidebar flex justify-center items-center gap-2 border-2 border-black p-1 bg-black-opacity-50 backdrop-blur-sm bg-slate-400/50 rounded-md lg:gap-2 lg:p-2">
-                    <div onClick={() => window.open("https://x.com/savvyyww", "_blank")}>
+                <div className="sidebar flex justify-center items-center gap-2 border-2 border-black p-1 bg-black-opacity-50 backdrop-blur-sm bg-slate-400/50 rounded-md lg:gap-2 lg:p-2 scale-75">
+                    <div onClick={() => window.open(`${import.meta.env.VITE_X_URL}`, "_blank")}>
                         <img className={sidebarImgCSS} src={X} alt="X" />
                     </div>
-                    <div onClick={() => window.open("https://www.linkedin.com/in/itsmesaurav", "_blank")}>
+                    <div onClick={() => window.open(`${import.meta.env.VITE_LINKEDIN_URL}`, "_blank")}>
                         <img className={sidebarImgCSS} src={Linkedin} alt="LinkedIn" />
                     </div>
-                    <div onClick={() => window.open("https://www.showwcase.com/xauravww", "_blank")}>
+                    <div onClick={() => window.open(`${import.meta.env.VITE_SHOWWCASE_URL}`, "_blank")}>
                         <img className={sidebarImgCSS} src={Showwcase} alt="Showwcase" />
                     </div>
                 </div>
             </div>
 
             {/* for large screens */}
-            <div className="hidden sidebar-wrapper absolute top-[32vw] left-8 h-full z-50 flex flex-col justify-center items-center lg:block lg:w-[3vw] scale-150">
+            <div className="hidden sidebar-wrapper absolute top-[40vh] left-8  z-50 flex flex-col justify-center items-center lg:block lg:w-[4vw] scale-150">
                 <div className="sidebar flex flex-col justify-center items-center gap-1 border-2 border-black p-1 bg-black-opacity-50 backdrop-blur-sm bg-slate-400/50 rounded-md lg:gap-2 lg:p-2">
                     <div onClick={() => window.open(`${import.meta.env.VITE_X_URL}`, "_blank")}>
                         <img className={sidebarImgCSS} src={X} alt="X" />

@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Genos:ital,wght@1,200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Lilita+One&family=Montserrat:wght@700&family=Noto+Sans&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Oregano:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -22,7 +23,7 @@
 *::after,
 *::before {
   box-sizing: border-box;
-  font-family:"Oregano", "Genos", "Noto Sans", sans-serif;
+  font-family:"Inter","Oregano", "Genos", "Noto Sans", sans-serif;
 
   margin: 0;
   /* border: 1px solid red; */
@@ -93,7 +94,7 @@ body::-webkit-scrollbar {
   padding-right: 0.5rem;
 } */
 
-/* 
-*{
+
+/* *{
   border: 1px solid red;
 } */

@@ -9,6 +9,7 @@ import hoverSound from '/assets/pop.mp3';
 import techStackData from '../assets/techstackdata.json';  
 
 
+
 const TechStack = ({ containerId }) => {
   const [isButtonHovered, setIsButtonHovered] = useState(false);
   const [play] = useSound(hoverSound, { volume: 0.8 });
@@ -46,9 +47,10 @@ const TechStack = ({ containerId }) => {
 
   return (
     <div
-      className="container-tech h-[calc(100vh)] flex flex-col justify-center items-center relative z-1 overflow-hidden bg-[#46285a]"
+      className="container-tech min-h-screen flex flex-col justify-center items-center relative z-1 overflow-hidden bg-gradient-to-r from-[#2a1836] to-[#150c1b]"
       id={containerId}
     >
+
     
       <div className="pattern2 absolute top-0 left-0 right-0 h-full w-full bg-[url('/assets/pattern2.png')] z-[1] backdrop-blur bg-fixed bg-center bg-norepeat- bg-cover"></div>
      

@@ -14,26 +14,26 @@ const techStackImages = {
   "Redux-Toolkit": "/assets/techstack/redux-toolkit.png",
 };
 
-const ProjectItem = ({ img, description, techStacks = [], url }) => {
+const ProjectItem = ({ img, description, techStacks = [], url ,projectTitle }) => {
   const [hoverItem, setHoverItem] = useState(false);
   const repo = url.repo;
   const live = url.live;
 
   return (
     <div
-      className="relative w-full bg-white rounded-md shadow-md h-[50vw] lg:h-[20vw]"
+      className="relative w-full rounded-xl h-[50vw] lg:h-[20vw] "
       onMouseEnter={() => setHoverItem(true)}
       onMouseLeave={() => setHoverItem(false)}
     >
       <img
-        className="rounded-t-md h-full w-full object-cover"
+        className="rounded-xl h-full w-full object-cover "
         src={img}
         alt="Project"
       />
       <div
-        className={`absolute inset-x-0 bottom-0 bg-[rgb(70,40,90)] transition-opacity duration-300 ease-in-out ${
+        className={`absolute rounded-b-xl inset-x-0 bottom-[-1px] bg-gradient-to-r from-[#2a1836] to-[#150c1b] transition-opacity duration-300 ease-in-out ${
           hoverItem ? "opacity-100" : "opacity-0"
-        } border-2 border-black text-white flex flex-col`}
+        }  text-white flex flex-col`}
       >
         {hoverItem && (
           <div className="flex flex-col p-4 w-full">
@@ -54,7 +54,8 @@ const ProjectItem = ({ img, description, techStacks = [], url }) => {
                 />
               ))}
             </div>
-            <p className="text-sm md:text-2xl mb-4">{description}</p>
+            <div className="text-sm md:text-3xl mb-4">{projectTitle}</div>
+            <p className="text-[#cccccc] font-oregano text-sm md:text-2xl mb-4">{description}</p>
             <div className="flex gap-2">
               {repo && (
                 <img
