@@ -1,13 +1,28 @@
-export const PROJECT_DETAILS = [ {
+export const PROJECT_DETAILS = [
+  {
+    title:"Detoxy Fusion",
+    id: "11",
+    img: "https://res.cloudinary.com/drvntsbpo/image/upload/v1724586718/2_jwyuaj.jpg",
+    description:
+      "Experience lightning-fast, secure chatting with our sleek app. Enjoy real-time messaging, AI-based toxicity filtering, community sharing and easy Google login. Seamless UX—chat redefined!",
+    techStacks: ["ReactJS","Express.js","MongoDB","Tailwind CSS"],
+    url: {
+     
+      repo:"https://github.com/xauravww/detoxy-fusion",
+      live:"https://detoxy-fusion-1.onrender.com"
+    }
+  },
+  
+  {
   title:"BRCM Educon - Android App",
   id: "10",
   img: "https://res.cloudinary.com/drvntsbpo/image/upload/v1722943455/brcmeduconmerge_oeppji.png",
   description:
     "A college managment Android App with features like managing students, attendance, and etc.",
-  techStacks: ["React Native","Express.js","MongoDB","Tailwind CSS"],
+  techStacks: ["ReactJS","Express.js","MongoDB","Tailwind CSS"],
   url: {
    
-    repo:"https://github.com/xauravww/brcmeducon-cross-platform",
+    repo:"https://github.com/xauravww/brcmeducon-cross-platform"
   }
 },
   {
@@ -64,7 +79,7 @@ export const PROJECT_DETAILS = [ {
   },
   {
     id: "8",
-    img: "https://camo.githubusercontent.com/cb75a91054198ca8c82680750eb5e31024874d36cf0526c517e51215008995b8/68747470733a2f2f7265732e636c6f7564696e6172792e636f6d2f6472766e747362706f2f696d6167652f75706c6f61642f76313730353736353831312f416e696d6174696f6e5f663577626a662e77656270",
+    img: "https://res.cloudinary.com/drvntsbpo/image/upload/v1724990853/color-shader_qmdnjt.png",
     title: "Color Shade Generator",
     description:
       "This miniproject lets you can Generate color shades from any type of color format",
