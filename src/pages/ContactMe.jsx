@@ -60,7 +60,7 @@ const ContactMe = ({ containerId }) => {
             <div className="pattern2 absolute top-0 left-0 right-0 h-full w-full bg-[url('/assets/pattern2.png')] z-[1] backdrop-blur bg-fixed bg-center bg-norepeat- bg-cover"></div>
             <div className="mask absolute top-0 left-0 h-full w-full bg-[rgba(0,0,0,0.6)] z-[2]"></div>
 
-            <div className="main-content border-double border-4 border-gray-600 bg-[#000] border-[#46285a] scale-95 shadow-[0px_0px_50px_-30px_rgba(255,255,255,.6)] p-4 flex flex-col items-center justify-center w-[90vw] lg:w-[30vw] text-2xl text-white text-center z-[3]">
+            <div className="main-content border-double border-4 border-gray-600 bg-[#000] border-[#46285a] scale-95 shadow-[0px_0px_50px_-30px_rgba(255,255,255,.6)] p-4 flex flex-col items-center justify-center max-w-[81vw] lg:w-[30vw] text-2xl text-white text-center z-[3] rounded-xl">
                 <form onSubmit={handleSubmit} className="space-y-6 w-full">
                     <div className="flex flex-col">
                         <label htmlFor="name" className="text-2xl lg:text-2xl font-medium mb-2">Name</label>

@@ -27,7 +27,7 @@ function Education({ containerId }) {
         Education
         <div className="underline-below-header absolute w-3/5 h-1 bg-white bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
       </header>
-      <div className="border-double border-4 border-gray-600 mt-8 md:mt-16 mx-4 md:mx-8 p-4 text-white grid grid-cols-1 md:grid-cols-2 gap-4 z-[3] bg-[#000] border-[#46285a] shadow-[0px_0px_50px_-30px_rgba(255,255,255,.6)]">
+      <div className="border-double border-4 border-gray-600 mt-8 max-w-[75vw] md:mt-16 mx-6 md:mx-8 p-4 text-white grid grid-cols-1 md:grid-cols-2 gap-4 z-[3] bg-[#000] border-[#46285a] shadow-[0px_0px_50px_-30px_rgba(255,255,255,.6)] rounded-xl">
         <div className="m-2 md:m-4">
           {classArray.map((item) => (
             <div

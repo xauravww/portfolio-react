@@ -33,12 +33,12 @@ const Navbar = () => {
 
   return (
     <div
-      className={`sticky nav-container bg-gradient-to-r from-[#2a1836] to-[#150c1b] z-[50] relative transition-opacity duration-300 ${isNavbarVisible ? 'opacity-100' : 'opacity-0'}`}
+      className={` sticky  nav-container bg-gradient-to-r from-[#2a1836] to-[#150c1b] z-[50] relative transition-opacity duration-300 ${isNavbarVisible ? 'opacity-100' : 'opacity-0'}`}
     >
       {/* Navbar overlay for small screens */}
       <div
         ref={navOverlayRef}
-        className={`fixed nav-overlay top-0 w-full bg-[#000] border-[#46285a] shadow-[0px_0px_50px_-30px_rgba(255,255,255,.6)] z-50 flex flex-col items-center py-16 text-3xl md:hidden transition-opacity duration-300 ${
+        className={`fixed  nav-overlay top-0 w-full bg-[#000] border-[#46285a] shadow-[0px_0px_50px_-30px_rgba(255,255,255,.6)] z-50 flex flex-col items-center py-16 text-3xl md:hidden transition-opacity duration-300 ${
           navbarToggleState ? 'opacity-100 visible' : 'opacity-0 invisible'
         }`}
         style={{
@@ -52,7 +52,7 @@ const Navbar = () => {
           &times;
         </button>
         {["Home", "TechStack", "Projects", "Blogs", "Education", "Contact"].map((section, index) => (
-          <div key={section} className="overlay-item text-white">
+          <div key={section} className="overlay-item text-white border-b-2 py-1 w-[60vw] mt-3 text-center">
             <Link
               activeClass="active"
               to={`section${index + 1}`}
@@ -68,7 +68,7 @@ const Navbar = () => {
         ))}
       </div>
 
-      <div className="fixed top-5 rounded-full left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-[#2a1836] to-[#150c1b] z-[12] navbar px-8 py-2 h-[4rem] max-w-fit flex justify-center items-center">
+      <div className="border-double border-2 border-gray-600 fixed top-5 rounded-full left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-[#2a1836] to-[#150c1b] z-[12] navbar px-8 py-2 h-[4rem] max-w-fit flex justify-center items-center">
         <ul className="nav-items hidden md:flex gap-4 text-white px-4 py-2 cursor-pointer text-xl md:text-3xl">
           {["Home", "TechStack", "Projects", "Blogs", "Education", "Contact"].map((section, index) => (
             <li key={section} className="li-item relative after:absolute after:bg-[#fff] after:content-[''] after:h-1 after:w-0 after:left-0 after:bottom-[-10px] hover:after:w-full after:transition-all after:duration-300 after:ease-in-out">

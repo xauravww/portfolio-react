@@ -61,6 +61,7 @@ const ProjectOverview = ({ containerId }) => {
       >
         {isActive && (
           <div className="grid-container rounded-md grid grid-cols-1 z-[5] md:grid-cols-2 lg:grid-cols-3 gap-10 ">
+           
             {currentPost.map((item) => (
               <ProjectItem
                 key={item.id}

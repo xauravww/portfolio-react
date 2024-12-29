@@ -1,5 +1,18 @@
 export const PROJECT_DETAILS = [
   {
+    title:"FunWala Telegram Bot",
+    id: "12",
+    img: "https://cdn.jsdelivr.net/gh/sauravtechno/main-d@main/assets/test/gen.webp",
+    description:
+      "Insta DM automation, yt downloader,GIFs generator,text and images Gen AI , inline queries and many more...",
+    techStacks: ["GramJS","Express.js","Node.js","Redis"],
+    url: {
+     
+      repo:"https://github.com/xauravww/xauravww-tg-userbot",
+      live:"https://telegram.dog/funwalabot"
+    }
+  },
+  {
     title:"Detoxy Fusion",
     id: "11",
     img: "https://res.cloudinary.com/drvntsbpo/image/upload/v1724586718/2_jwyuaj.jpg",

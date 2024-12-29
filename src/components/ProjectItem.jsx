@@ -12,12 +12,17 @@ const techStackImages = {
   VanillaJs: "/assets/techstack/js.png",
   "Node.js": "/assets/techstack/nodejs.png",
   "Redux-Toolkit": "/assets/techstack/redux-toolkit.png",
+  "Redis": "/assets/techstack/redis.png",
+  "GramJS": "/assets/techstack/gramjs.png"
 };
 
 const ProjectItem = ({ img, description, techStacks = [], url ,projectTitle }) => {
   const [hoverItem, setHoverItem] = useState(false);
   const repo = url.repo;
   const live = url.live;
+// if( !img && !description && !techStacks && !url && !projectTitle){
+//   console.log("Some project details missing")
+// }
 
   return (
     <div
@@ -29,6 +34,10 @@ const ProjectItem = ({ img, description, techStacks = [], url ,projectTitle }) =
         className="rounded-xl h-full w-full object-cover "
         src={img}
         alt="Project"
+        onError={(e) => {
+          e.target.onerror = null;
+          e.target.src = "/assets/techstack/image-not-found.png";
+        }}
       />
       <div
         className={`absolute rounded-b-xl inset-x-0 bottom-[-1px] bg-gradient-to-r from-[#2a1836] to-[#150c1b] transition-opacity duration-300 ease-in-out ${

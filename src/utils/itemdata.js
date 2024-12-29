@@ -17,7 +17,7 @@ const DATA = [
       id: 3,
       class: "B.Tech CSE",
       school: "BRCM College Of Engineering and Technology , Bahal , Haryana",
-      time: "December 2020 - Present",
+      time: "December 2020 - May 2024",
       marks: "Marks - 80.18 %"
     }
   ]
