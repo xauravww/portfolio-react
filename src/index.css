@@ -12,10 +12,11 @@
   src: url("./assets/Cyborg-ZV7eq.ttf");
 }
 :root {
-  --lightest: #bea1d4;
-  --light: #9972b0;
-  --medium: #bea1d4;
-  --dark: #46285a;
+  --bg-dark: #1A1D24;
+  --text-light: #F0F0F0;
+  --text-medium: #A0A0A0;
+  --accent-blue: #4A90E2;
+  --border-color: #33373E;
   --creamy: #e3dcd5;
 }
 

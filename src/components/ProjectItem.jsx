@@ -40,7 +40,7 @@ const ProjectItem = ({ img, description, techStacks = [], url ,projectTitle }) =
         }}
       />
       <div
-        className={`absolute rounded-b-xl inset-x-0 bottom-[-1px] bg-gradient-to-r from-[#2a1836] to-[#150c1b] transition-opacity duration-300 ease-in-out ${
+        className={`absolute rounded-b-xl inset-x-0 bottom-[-1px] bg-[var(--bg-dark)] border-t border-[var(--border-color)] transition-opacity duration-300 ease-in-out ${
           hoverItem ? "opacity-100" : "opacity-0"
         }  text-white flex flex-col`}
       >
@@ -50,7 +50,7 @@ const ProjectItem = ({ img, description, techStacks = [], url ,projectTitle }) =
               {techStacks.map((tech, index) => (
                 <img
                   key={index}
-                  className="rounded-full border-2 border-white"
+                  className="rounded-full border-2 border-[var(--accent-blue)]"
                   src={techStackImages[tech] || "default-image-path.png"} // Replace with a default image path if needed
                   alt={tech}
                   style={{
@@ -58,13 +58,13 @@ const ProjectItem = ({ img, description, techStacks = [], url ,projectTitle }) =
                     height: `${30}px`,
                     zIndex: techStacks.length - index,
                     margin: "-7px",
-                    backgroundColor: "black",
+                    backgroundColor: "var(--bg-dark)",
                   }}
                 />
               ))}
             </div>
             <div className="text-sm md:text-3xl mb-4">{projectTitle}</div>
-            <p className="text-[#cccccc] font-oregano text-sm md:text-2xl mb-4">{description.length>100?`${description.slice(0,100)}...`:description}</p>
+            <p className="text-[var(--text-medium)] font-oregano text-sm md:text-2xl mb-4">{description.length>100?`${description.slice(0,100)}...`:description}</p>
             <div className="flex gap-2">
               {repo && (
                 <img

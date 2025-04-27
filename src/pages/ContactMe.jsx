@@ -49,21 +49,21 @@ const ContactMe = ({ containerId }) => {
 
     return (
         <div
-            className="ContactMe min-h-screen relative bg-gradient-to-r from-[#2a1836] to-[#150c1b] flex flex-col justify-evenly items-center overflow-hidden"
+            className="ContactMe min-h-screen relative bg-[var(--bg-dark)] flex flex-col justify-evenly items-center overflow-hidden"
             id={containerId}
         >
     
             <header className="text-3xl md:text-5xl text-white font-bold relative z-[3] text-center px-4">
                 Contact Me
-                <div className="underline-below-header absolute w-3/5 h-1 bg-white bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+                <div className="underline-below-header absolute w-3/5 h-1 bg-[var(--accent-blue)] bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
             </header>
             <div className="pattern2 absolute top-0 left-0 right-0 h-full w-full bg-[url('/assets/pattern2.png')] z-[1] backdrop-blur bg-fixed bg-center bg-norepeat- bg-cover"></div>
             <div className="mask absolute top-0 left-0 h-full w-full bg-[rgba(0,0,0,0.6)] z-[2]"></div>
 
-            <div className="main-content border-double border-4 border-gray-600 bg-[#000] border-[#46285a] scale-95 shadow-[0px_0px_50px_-30px_rgba(255,255,255,.6)] p-4 flex flex-col items-center justify-center max-w-[81vw] lg:w-[30vw] text-2xl text-white text-center z-[3] rounded-xl">
+            <div className="main-content border-double border-4 border-[var(--border-color)] bg-[var(--bg-dark)] scale-95 p-4 flex flex-col items-center justify-center max-w-[81vw] lg:w-[30vw] text-2xl text-[var(--text-light)] text-center z-[3] rounded-xl">
                 <form onSubmit={handleSubmit} className="space-y-6 w-full">
                     <div className="flex flex-col">
-                        <label htmlFor="name" className="text-2xl lg:text-2xl font-medium mb-2">Name</label>
+                        <label htmlFor="name" className="text-2xl lg:text-2xl font-medium mb-2 text-[var(--text-light)]">Name</label>
                         <input
                             type="text"
                             id="name"
@@ -72,12 +72,13 @@ const ContactMe = ({ containerId }) => {
                             onChange={handleChange}
                             required
                             maxLength={"30"}
-                            className="text-black p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            placeholder="Your Name"
+                            className="bg-[var(--border-color)] border-[var(--border-color)] text-[var(--text-light)] placeholder:text-[var(--text-medium)] p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--accent-blue)]"
                         />
                     </div>
 
                     <div className="flex flex-col">
-                        <label htmlFor="email" className="text-2xl lg:text-2xl font-medium mb-2">Email</label>
+                        <label htmlFor="email" className="text-2xl lg:text-2xl font-medium mb-2 text-[var(--text-light)]">Email</label>
                         <input
                             type="email"
                             id="email"
@@ -85,13 +86,14 @@ const ContactMe = ({ containerId }) => {
                             value={formData.email}
                             onChange={handleChange}
                             required
-                            className="text-black p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            placeholder="your.email@example.com"
+                            className="bg-[var(--border-color)] border-[var(--border-color)] text-[var(--text-light)] placeholder:text-[var(--text-medium)] p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--accent-blue)]"
                             maxLength={"50"}
                         />
                     </div>
 
                     <div className="flex flex-col">
-                        <label htmlFor="query" className="text-2xl lg:text-2xl font-medium mb-2">Message</label>
+                        <label htmlFor="query" className="text-2xl lg:text-2xl font-medium mb-2 text-[var(--text-light)]">Message</label>
                         <textarea
                             id="query"
                             name="query"
@@ -100,13 +102,14 @@ const ContactMe = ({ containerId }) => {
                             required
                             rows="4"
                             maxLength={"500"}
-                            className="text-black resize-none p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            placeholder="Your message here..."
+                            className="bg-[var(--border-color)] border-[var(--border-color)] text-[var(--text-light)] placeholder:text-[var(--text-medium)] resize-none p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--accent-blue)]"
                         />
                     </div>
 
                     <button
                         type="submit"
-                        className={`bg-[#f3d800] text-black py-3 px-6 rounded-lg shadow-md hover:bg-[#f8e866] focus:outline-none focus:ring-2  $loader-active:scale-125 transition duration-300 ease-in-out scale-75 lg:scale-100`}
+                        className={`bg-[var(--accent-blue)] text-[var(--bg-dark)] py-3 px-6 rounded-lg shadow-md hover:opacity-90 focus:outline-none focus:ring-2 $loader-active:scale-125 transition duration-300 ease-in-out scale-75 lg:scale-100`}
                     >
                         {loader? "Sending..." : "Submit"  }
                     </button>
@@ -115,7 +118,7 @@ const ContactMe = ({ containerId }) => {
 
             {/* for small screens and medium */}
             <div className="sidebar-wrapper z-50 lg:hidden">
-                <div className="sidebar flex justify-center items-center gap-2 border-2 border-black p-1 bg-black-opacity-50 backdrop-blur-sm bg-slate-400/50 rounded-md lg:gap-2 lg:p-2 scale-75">
+                <div className="sidebar flex justify-center items-center gap-2 border-2 border-[var(--border-color)] p-1 bg-[var(--border-color)]/50 backdrop-blur-sm rounded-md lg:gap-2 lg:p-2 scale-75">
                     <div onClick={() => window.open(`${import.meta.env.VITE_X_URL}`, "_blank")}>
                         <img className={sidebarImgCSS} src={X} alt="X" />
                     </div>
@@ -130,7 +133,7 @@ const ContactMe = ({ containerId }) => {
 
             {/* for large screens */}
             <div className="hidden sidebar-wrapper absolute top-[40vh] left-8  z-50 flex flex-col justify-center items-center lg:block lg:w-[4vw] scale-150">
-                <div className="sidebar flex flex-col justify-center items-center gap-1 border-2 border-black p-1 bg-black-opacity-50 backdrop-blur-sm bg-slate-400/50 rounded-md lg:gap-2 lg:p-2">
+                <div className="sidebar flex flex-col justify-center items-center gap-1 border-2 border-[var(--border-color)] p-1 bg-[var(--border-color)]/50 backdrop-blur-sm rounded-md lg:gap-2 lg:p-2">
                     <div onClick={() => window.open(`${import.meta.env.VITE_X_URL}`, "_blank")}>
                         <img className={sidebarImgCSS} src={X} alt="X" />
                     </div>

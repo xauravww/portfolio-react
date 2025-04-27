@@ -39,31 +39,32 @@ const Pagination = ({ totalPosts, postPerPage, setcurrentPage, currentPage }) =>
         <div className="pagination-container flex justify-center gap-1 md:gap-2 flex-wrap md:mt-5">
             {startPage > 1 && (
                 <button
-                    className="text-white text-lg md:text-xl lg:text-2xl px-1 md:px-2 font-bold"
-                    style={{ backgroundColor: 'black' }}
+                    className={`text-lg md:text-xl lg:text-2xl font-bold rounded px-3 py-1 transition-colors duration-200 bg-transparent text-[var(--text-medium)] border border-[var(--border-color)] hover:bg-[var(--border-color)] hover:text-[var(--text-light)]`}
                     onClick={() => setcurrentPage(1)}
                 >
                     1
                 </button>
             )}
-            {startPage > 2 && <span className="text-white text-lg md:text-xl lg:text-2xl px-1 md:px-2 font-bold">...</span>}
+            {startPage > 2 && <span className="text-[var(--text-medium)] text-lg md:text-xl lg:text-2xl px-1 md:px-2 font-bold">...</span>}
             
             {pages.map((page) => (
                 <button
                     key={page}
-                    className="text-white text-lg md:text-xl lg:text-2xl px-1 md:px-2 font-bold"
-                    style={page === currentPage ? { backgroundColor: 'yellow', color: 'black' } : { backgroundColor: 'black' }}
+                    className={`text-lg md:text-xl lg:text-2xl font-bold rounded px-3 py-1 transition-colors duration-200 ${
+                      page === currentPage
+                        ? 'bg-[var(--accent-blue)] text-[var(--bg-dark)] border border-[var(--accent-blue)]'
+                        : 'bg-transparent text-[var(--text-medium)] border border-[var(--border-color)] hover:bg-[var(--border-color)] hover:text-[var(--text-light)]'
+                    }`}
                     onClick={() => setcurrentPage(page)}
                 >
                     {page}
                 </button>
             ))}
 
-            {endPage < totalPages - 1 && <span className="text-white text-sm md:text-xl lg:text-2xl px-1 md:px-2 font-bold">...</span>}
+            {endPage < totalPages - 1 && <span className="text-[var(--text-medium)] text-sm md:text-xl lg:text-2xl px-1 md:px-2 font-bold">...</span>}
             {endPage < totalPages && (
                 <button
-                    className="text-white text-lg md:text-xl lg:text-2xl px-1 md:px-2 font-bold"
-                    style={{ backgroundColor: 'black' }}
+                    className={`text-lg md:text-xl lg:text-2xl font-bold rounded px-3 py-1 transition-colors duration-200 bg-transparent text-[var(--text-medium)] border border-[var(--border-color)] hover:bg-[var(--border-color)] hover:text-[var(--text-light)]`}
                     onClick={() => setcurrentPage(totalPages)}
                 >
                     {totalPages}

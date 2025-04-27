@@ -42,18 +42,18 @@ const ProjectOverview = ({ containerId }) => {
   }, []);
   return (
     <div
-      className="ProjectOverview min-h-screen relative bg-gradient-to-r from-[#2a1836] to-[#150c1b] flex flex-col justify-center items-center"
+      className="ProjectOverview min-h-screen relative bg-[var(--bg-dark)] flex flex-col justify-center items-center"
       id={containerId}
     >
 
        <header className="text-3xl md:text-5xl text-white font-bold relative z-[3] text-center px-4">
         Projects
-        <div className="underline-below-header absolute w-3/5 h-1 bg-white bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="underline-below-header absolute w-3/5 h-1 bg-[var(--accent-blue)] bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
       </header>
       <div
         className="projects-wrapper z-[6]  mt-6 overflow-y-auto h-[60vh]  rounded-md p-4 m-6"
         style={{
-          scrollbarColor: "rgb(243, 216, 0) transparent",
+          scrollbarColor: "var(--accent-blue) transparent",
           scrollbarWidth: "5px",
 
           zIndex: 10,

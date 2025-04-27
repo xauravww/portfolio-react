@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar"
 import Home from "./pages/Home"
 import TechStack from "./pages/TechStack"
 import ProjectOverview from "./pages/ProjectOverview"
+import Experience from "./pages/Experience"
 import Blogs from "./pages/Blogs"
 // import "./App.css"
 
@@ -22,9 +23,10 @@ const App = () => {
       <Home containerId="section1" />
       <TechStack containerId="section2" />
       <ProjectOverview containerId="section3" />
-      <Blogs containerId="section4" />
-      <Education containerId="section5" />
-      <ContactMe containerId="section6" />
+      <Experience containerId="section4" />
+      <Blogs containerId="section5" />
+      <Education containerId="section6" />
+      <ContactMe containerId="section7" />
 </NavbarContextFunction>
       {/* <ProjectItem /> */}
     </div>
