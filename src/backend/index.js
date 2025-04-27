@@ -150,6 +150,11 @@ app.post("/api/queries", async (req, res) => {
   }
 });
 
+// Health Check Route
+app.get('/healthz', (req, res) => {
+  res.status(200).json({ status: 'ok' });
+});
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
