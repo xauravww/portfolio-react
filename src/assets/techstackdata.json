@@ -17,6 +17,7 @@
     { "src": "assets/graphql.png", "alt": "GraphQL" },
     { "src": "assets/techstack/sanity.png", "alt": "Sanity CMS" },
     { "src": "assets/techstack/notion.png", "alt": "Notion DB" },
-    { "src": "assets/techstack/redis.png", "alt": "Redis" }
+    { "src": "assets/techstack/redis.png", "alt": "Redis" },
+    { "src": "assets/techstack/n8n.jpg", "alt": "N8N" }
   ]
   

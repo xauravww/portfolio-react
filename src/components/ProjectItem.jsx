@@ -13,7 +13,8 @@ const techStackImages = {
   "Node.js": "/assets/techstack/nodejs.png",
   "Redux-Toolkit": "/assets/techstack/redux-toolkit.png",
   "Redis": "/assets/techstack/redis.png",
-  "GramJS": "/assets/techstack/gramjs.png"
+  "GramJS": "/assets/techstack/gramjs.png",
+  "N8N": "/assets/techstack/n8n.jpg"
 };
 
 const ProjectItem = ({ img, description, techStacks = [], url ,projectTitle }) => {
