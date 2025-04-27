@@ -12,22 +12,22 @@ import Blogs from "./pages/Blogs"
 import Education from "./pages/Education"
 import ContactMe from "./pages/ContactMe.jsx"
 import NavbarContextFunction from "./context/navbarContext.jsx"
+import CursorGlow from "./components/CursorGlow"
 
 const App = () => {
   return (
     <div className="App  bg-position-center relative ">
-    <NavbarContextFunction>
-
-    
-    <Navbar />
-      <Home containerId="section1" />
-      <TechStack containerId="section2" />
-      <ProjectOverview containerId="section3" />
-      <Experience containerId="section4" />
-      <Blogs containerId="section5" />
-      <Education containerId="section6" />
-      <ContactMe containerId="section7" />
-</NavbarContextFunction>
+      <CursorGlow />
+      <NavbarContextFunction>
+        <Navbar />
+        <Home containerId="section1" />
+        <TechStack containerId="section2" />
+        <ProjectOverview containerId="section3" />
+        <Experience containerId="section4" />
+        <Blogs containerId="section5" />
+        <Education containerId="section6" />
+        <ContactMe containerId="section7" />
+      </NavbarContextFunction>
       {/* <ProjectItem /> */}
     </div>
   )

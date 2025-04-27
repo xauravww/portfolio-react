@@ -36,7 +36,7 @@ function Experience({ containerId }) {
   };
 
   return (
-    <div className="experience-container flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-[#2a1836] to-[#150c1b] relative py-16 md:py-24" id={containerId}>
+    <div className="experience-container flex flex-col items-center justify-center min-h-screen relative py-16 md:py-24" id={containerId}>
       <div className="pattern2 absolute top-0 left-0 right-0 h-full w-full bg-[url('/assets/pattern2.png')] z-[1] backdrop-blur bg-fixed bg-center bg-norepeat- bg-cover"></div>
       <div className="mask absolute top-0 left-0 h-full w-full bg-[rgba(0,0,0,0.6)] z-[2]"></div>
 
@@ -45,7 +45,7 @@ function Experience({ containerId }) {
         <div className="underline-below-header absolute w-3/5 h-1 bg-[var(--accent-blue)] bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1"></div>
       </header>
 
-      <div className="experience-content-box border-double border-4 border-[var(--border-color)] max-w-[75vw] mx-6 md:mx-8 p-4 text-[var(--text-light)] grid grid-cols-1 md:grid-cols-3 gap-4 z-[3] bg-[var(--bg-dark)] rounded-xl opacity-0">
+      <div className="experience-content-box border border-[var(--border-color)] max-w-[75vw] mx-6 md:mx-8 p-4 text-[var(--text-light)] grid grid-cols-1 md:grid-cols-3 gap-4 z-[3] bg-[var(--bg-dark)]/70 backdrop-blur-sm rounded-xl opacity-0">
          <div className="md:col-span-1 m-2 md:m-4 border-r border-[var(--border-color)] pr-4">
           {EXPERIENCEDATA.map((data) => (
             <div

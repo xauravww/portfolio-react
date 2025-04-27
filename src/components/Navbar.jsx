@@ -33,12 +33,12 @@ const Navbar = () => {
 
   return (
     <div
-      className={` sticky  nav-container bg-[var(--bg-dark)] z-[50] relative transition-opacity duration-300 ${isNavbarVisible ? 'opacity-100' : 'opacity-0'}`}
+      className={` sticky nav-container bg-[var(--bg-dark)] z-[50] relative transition-opacity duration-300 ${isNavbarVisible ? 'opacity-100' : 'opacity-0'}`}
     >
-      {/* Navbar overlay for small screens */}
+      {/* Mobile Overlay (Add blur and transparent background) */}
       <div
         ref={navOverlayRef}
-        className={`fixed nav-overlay top-0 w-full bg-[var(--bg-dark)] border border-[var(--border-color)] z-50 flex flex-col items-center py-16 text-3xl md:hidden transition-opacity duration-300 ${
+        className={`fixed nav-overlay top-0 w-full bg-[var(--bg-dark)]/80 backdrop-blur-md border border-[var(--border-color)] z-50 flex flex-col items-center py-16 text-3xl md:hidden transition-opacity duration-300 ${
           navbarToggleState ? 'opacity-100 visible' : 'opacity-0 invisible'
         }`}
         style={{
@@ -68,7 +68,8 @@ const Navbar = () => {
         ))}
       </div>
 
-      <div className="border-double border-2 border-gray-600 fixed top-5 rounded-full left-1/2 transform -translate-x-1/2 bg-[var(--bg-dark)] z-[12] navbar px-8 py-2 h-[4rem] max-w-fit flex justify-center items-center">
+      {/* Desktop Navbar (Add blur and transparent background) */}
+      <div className="fixed top-5 rounded-full left-1/2 transform -translate-x-1/2 bg-[var(--bg-dark)]/80 backdrop-blur-md border border-[var(--border-color)] z-[12] navbar px-8 py-2 h-[4rem] max-w-fit flex justify-center items-center">
         <ul className="nav-items hidden md:flex gap-4 text-white px-4 py-2 cursor-pointer text-xl md:text-3xl">
           {["Home", "TechStack", "Projects", "Experience", "Blogs", "Education", "Contact"].map((section, index) => (
             <li key={section} className="li-item relative after:absolute after:bg-[#fff] after:content-[''] after:h-1 after:w-0 after:left-0 after:bottom-[-10px] hover:after:w-full after:transition-all after:duration-300 after:ease-in-out">

@@ -20,6 +20,37 @@
   --creamy: #e3dcd5;
 }
 
+/* --- Aurora Background Animation --- */
+@keyframes aurora {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  /* Base background color */
+  background-color: var(--bg-dark);
+
+  /* Large, soft gradient using theme-related colors */
+  background-image: radial-gradient(ellipse at top left,    rgba(74, 144, 226, 0.25) 0%, transparent 50%),
+                    radial-gradient(ellipse at top right,   rgba(60, 180, 180, 0.25) 0%, transparent 50%),
+                    radial-gradient(ellipse at bottom left, rgba(100, 80, 160, 0.25) 0%, transparent 50%),
+                    radial-gradient(ellipse at bottom right,rgba(74, 100, 226, 0.25) 0%, transparent 50%);
+
+  /* Ensure gradient is large enough to cover and move */
+  background-size: 300% 300%;
+
+  /* Apply the animation */
+  animation: aurora 20s ease infinite;
+}
+/* -------------------------------- */
+
 *,
 *::after,
 *::before {

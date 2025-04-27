@@ -26,7 +26,7 @@ const Home = ({ containerId }) => {
 
   return (
     <div
-      className="container-home bg-gradient-to-r from-[#2a1836] to-[#150c1b] min-h-screen flex flex-col justify-center items-center relative z-1 py-16 md:py-24 overflow-hidden"
+      className="container-home min-h-screen flex flex-col justify-center items-center relative z-1 py-16 md:py-24 overflow-hidden"
       id={containerId}
     >
       <div className="mask absolute top-0 left-0 h-full w-full bg-[rgba(0,0,0,0.6)] z-[2]"></div>
