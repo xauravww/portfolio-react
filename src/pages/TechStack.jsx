@@ -1,76 +1,54 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import PropTypes from 'prop-types';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import useSound from 'use-sound';
-import hoverSound from '/assets/pop.mp3';
 
-
-import techStackData from '../assets/techstackdata.json';  
-
-
+import techStackData from '../assets/techstackdata.json';
 
 const TechStack = ({ containerId }) => {
-  const [isButtonHovered, setIsButtonHovered] = useState(false);
-  const [play] = useSound(hoverSound, { volume: 0.8 });
-
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const element = document.querySelector(".box");
-    gsap.set(element, { transformPerspective: 500 });
-    gsap.to(".box", {
-      duration: 4,
-      rotationX: -20,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: ".container-tech",
-        scroller: "body",
-        scrub: 4,
-        start: "top center",
-      },
-    });
+    gsap.fromTo(".tech-icon-item",
+      { opacity: 0, scale: 0.5, y: 50 },
+      {
+        opacity: 1,
+        scale: 1,
+        y: 0,
+        duration: 0.5,
+        ease: "power3.out",
+        stagger: 0.1,
+        scrollTrigger: {
+          trigger: ".tech-stack-container",
+          start: "top 80%",
+        }
+      }
+    );
   }, []);
 
-  const techStackItemsCss = "tech-stack-item-img w-12 hover:scale-125 md:w-20 lg:w-24";
-
-  const handleHover = () => {
-    if (!isButtonHovered) {
-      play();
-      setIsButtonHovered(true);
-    }
-  };
-
-  const handleMouseLeave = () => {
-    setIsButtonHovered(false);
-  };
+  const techStackItemsCss = "tech-stack-item-img w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 object-contain transition-transform duration-300 hover:scale-110";
 
   return (
     <div
-      className="container-tech min-h-screen flex flex-col justify-center items-center relative z-1 overflow-hidden bg-[var(--bg-dark)]"
+      className="container-tech min-h-screen flex flex-col justify-center items-center relative z-1 overflow-hidden bg-gradient-to-r from-[#2a1836] to-[#150c1b] py-16 md:py-24"
       id={containerId}
     >
-
-    
       <div className="pattern2 absolute top-0 left-0 right-0 h-full w-full bg-[url('/assets/pattern2.png')] z-[1] backdrop-blur bg-fixed bg-center bg-norepeat- bg-cover"></div>
-     
       <div className="mask absolute top-0 left-0 h-full w-full bg-[rgba(0,0,0,0.6)] z-[2] "></div>
-      <div
-        className="box border-double border-4 border-[var(--border-color)] bg-[var(--bg-dark)] p-8 grid gap-4 grid-cols-3 grid-rows-2 rounded-lg z-[5] md:grid-rows-1 md:grid-cols-4 lg:grid-cols-5"
-        style={{
-          perspective: "500px",
-          transform: "rotateX(20deg)",
-        }}
-      >
+
+      <header className="text-3xl md:text-5xl text-white font-bold relative z-[3] text-center px-4 mb-12 md:mb-16">
+        Tech Stack
+        <div className="underline-below-header absolute w-3/5 h-1 bg-[var(--accent-blue)] bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1"></div>
+      </header>
+
+      <div className="tech-stack-container relative z-[3] w-full max-w-4xl lg:max-w-5xl flex flex-wrap justify-center items-center gap-6 md:gap-8 lg:gap-10 px-4">
         {techStackData.map((item, index) => (
-          <div className="item flex justify-center items-center border border-[var(--border-color)] rounded-md p-2 bg-gray-700" key={index}>
-            <img
-              src={item.src}
-              className={techStackItemsCss}
-              alt={item.alt}
-              onMouseEnter={handleHover}
-              onMouseLeave={handleMouseLeave}
-            />
+          <div key={index} className="tech-icon-item flex flex-col items-center opacity-0">
+             <img
+               src={item.src}
+               className={techStackItemsCss}
+               alt={item.alt}
+             />
           </div>
         ))}
       </div>

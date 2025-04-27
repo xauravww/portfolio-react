@@ -99,3 +99,7 @@ body::-webkit-scrollbar {
 /* *{
   border: 1px solid red;
 } */
+
+.nav-items .li-item a.active::after {
+  width: 100%;
+}
