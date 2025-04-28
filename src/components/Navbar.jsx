@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
 import hamburger from "/assets/arrow_down.png";
 import { navbarContext } from "../context/navbarContext";
+import { gsap } from "gsap";
 
 const Navbar = () => {
   const { navbarToggleState, setNavbarToggleState } = React.useContext(navbarContext);
@@ -12,12 +13,18 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
-      setIsNavbarVisible(prevScrollPos > currentScrollPos);
+      setIsNavbarVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
       setPrevScrollPos(currentScrollPos);
     };
 
     const handleClickOutside = (event) => {
-      if (navOverlayRef.current && !navOverlayRef.current.contains(event.target)) {
+      const hamburgerButton = document.querySelector('.hamburger');
+      if (
+        navOverlayRef.current &&
+        !navOverlayRef.current.contains(event.target) &&
+        hamburgerButton &&
+        !hamburgerButton.contains(event.target)
+      ) {
         setNavbarToggleState(false);
       }
     };
@@ -31,41 +38,53 @@ const Navbar = () => {
     };
   }, [prevScrollPos, setNavbarToggleState]);
 
+  useEffect(() => {
+    if (navbarToggleState) {
+      gsap.fromTo(".overlay-item",
+        { opacity: 0, y: -20 },
+        { opacity: 1, y: 0, duration: 0.3, stagger: 0.07, ease: "power2.out" }
+      );
+    } else {
+      gsap.set(".overlay-item", { opacity: 0 });
+    }
+  }, [navbarToggleState]);
+
   return (
     <div
       className={` sticky nav-container bg-[var(--bg-dark)] z-[50] relative transition-opacity duration-300 ${isNavbarVisible ? 'opacity-100' : 'opacity-0'}`}
     >
-      {/* Mobile Overlay (Add blur and transparent background) */}
+      {/* Mobile Overlay */}
       <div
         ref={navOverlayRef}
-        className={`fixed nav-overlay top-0 w-full bg-[var(--bg-dark)]/80 backdrop-blur-md border border-[var(--border-color)] z-50 flex flex-col items-center py-16 text-3xl md:hidden transition-opacity duration-300 ${
+        className={`fixed nav-overlay inset-0 bg-[var(--bg-dark)]/90 backdrop-blur-lg z-50 flex flex-col items-center justify-center transition-opacity duration-300 md:hidden ${
           navbarToggleState ? 'opacity-100 visible' : 'opacity-0 invisible'
         }`}
-        style={{
-          transition: "opacity 0.3s ease-in-out, visibility 0.3s ease-in-out",
-        }}
       >
         <button
-          className="absolute top-4 right-4 text-white text-2xl"
+          className="absolute top-5 right-5 text-[var(--text-light)] text-3xl"
           onClick={() => setNavbarToggleState(false)}
+          aria-label="Close menu"
         >
           &times;
         </button>
-        {["Home", "TechStack", "Projects", "Experience", "Blogs", "Education", "Contact"].map((section, index) => (
-          <div key={section} className="overlay-item text-white border-b-2 py-1 w-[60vw] mt-3 text-center">
-            <Link
-              activeClass="active"
-              to={`section${index + 1}`}
-              spy={true}
-              smooth={true}
-              offset={index === 0 ? -100 : 0}
-              duration={500}
-              onClick={() => setNavbarToggleState(false)}
-            >
-              {section}
-            </Link>
-          </div>
-        ))}
+        <ul className="flex flex-col items-center w-full px-8">
+          {["Home", "TechStack", "Projects", "Experience", "Blogs", "Education", "Contact"].map((section, index) => (
+            <li key={section} className="overlay-item w-full text-center opacity-0">
+              <Link
+                activeClass="active-mobile-link"
+                to={`section${index + 1}`}
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={500}
+                onClick={() => setNavbarToggleState(false)}
+                className="block py-4 text-2xl text-[var(--text-light)] hover:text-[var(--accent-blue)] transition-colors duration-200"
+              >
+                {section}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
 
       {/* Desktop Navbar (Add blur and transparent background) */}
@@ -86,15 +105,15 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <img
-          className="hamburger cursor-pointer w-10 h-10 md:hidden"
-          src={hamburger}
-          alt="Menu"
-          style={{
-            filter: "invert(100%) sepia(0%) saturate(1%) hue-rotate(51deg) brightness(103%) contrast(101%)",
-          }}
+        <button
+          className="hamburger cursor-pointer w-8 h-8 md:hidden text-[var(--text-light)]"
           onClick={() => setNavbarToggleState(!navbarToggleState)}
-        />
+          aria-label="Toggle menu"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-full w-full" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
       </div>
       <img
         src="/assets/arrow-up.svg"

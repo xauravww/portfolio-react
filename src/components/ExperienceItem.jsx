@@ -5,8 +5,6 @@ const ExperienceItem = ({ title, company, time, description }) => {
   return (
     <>
       <div className="flex flex-col justify-start items-start">
-        <div className="flex items-center bg-[var(--accent-blue)] text-xl lg:text-2xl text-[var(--bg-dark)] rounded-md py-1 px-4 mb-3 font-semibold">{title}</div>
-        <div className="text-lg lg:text-xl mb-1 text-[var(--text-light)] font-medium">{company}</div>
         <div className="text-md lg:text-lg text-[var(--text-medium)] mb-3">{time}</div>
         <ul className="list-disc pl-5 text-md lg:text-lg text-[var(--text-light)] space-y-1">
           {description.map((point, index) => (

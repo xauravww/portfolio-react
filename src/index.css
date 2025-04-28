@@ -134,3 +134,12 @@ body::-webkit-scrollbar {
 .nav-items .li-item a.active::after {
   width: 100%;
 }
+
+.active {
+  @apply text-[var(--accent-blue)]; /* Or your desired active style */
+}
+
+/* Add styles for the active mobile link */
+.active-mobile-link {
+  @apply text-[var(--accent-blue)] font-semibold; /* Example: use accent color and make font bolder */
+}
