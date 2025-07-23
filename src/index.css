@@ -10,7 +10,9 @@
 @font-face {
   font-family: Cyborg;
   src: url("/assets/Cyborg-ZV7eq.ttf");
+  font-display: swap;
 }
+
 :root {
   --bg-dark: #1A1D24;
   --text-light: #F0F0F0;
@@ -18,6 +20,9 @@
   --accent-blue: #4A90E2;
   --border-color: #33373E;
   --creamy: #e3dcd5;
+  
+  /* Focus outline for accessibility */
+  --focus-ring: 0 0 0 3px rgba(74, 144, 226, 0.5);
 }
 
 /* --- Aurora Background Animation --- */
@@ -31,6 +36,11 @@
   100% {
     background-position: 0% 50%;
   }
+}
+
+/* Prevent scrolling during loading */
+body.loading {
+  overflow: hidden;
 }
 
 body {
@@ -48,89 +58,60 @@ body {
 
   /* Apply the animation */
   animation: aurora 20s ease infinite;
+  
+  /* Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
-/* -------------------------------- */
 
 *,
 *::after,
 *::before {
   box-sizing: border-box;
-  font-family:"Inter","Oregano", "Genos", "Noto Sans", sans-serif;
-
+  font-family: "Inter", "Oregano", "Genos", "Noto Sans", sans-serif;
   margin: 0;
-  /* border: 1px solid red; */
-  /* cursor: url("./assets/pointinghand.svg"), auto; */
 }
 
-/* body {
-  border: 5px solid red;
-} */
-
+/* Improved scrollbar styling */
 body::-webkit-scrollbar {
-  display: none;
-}
-/*
-::-webkit-scrollbar-thumb {
-  background-color: var(--dark);
-}
-*/
-* {
-  /* border: 1px solid red; */
+  width: 10px;
 }
 
-/* .utility {
-  width: 1536px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  border: 1px solid red;
+body::-webkit-scrollbar-track {
+  background: var(--bg-dark);
 }
 
-@media (min-width: 1536px) {
-  .utility {
-    max-width: 1280px;
-  }
+body::-webkit-scrollbar-thumb {
+  background-color: var(--border-color);
+  border-radius: 6px;
+  border: 2px solid var(--bg-dark);
 }
-@media (min-width: 1280px) {
-  .utility {
-    max-width: 1024px;
-  }
-}
-@media (min-width: 1024px) {
-  .utility {
-    max-width: 768px;
-  }
-}
-@media (min-width: 768px) {
-  .utility {
-    max-width: 640px;
-  }
-}
-@media (min-width: 640px) {
-  .utility {
-    max-width: 475px;
-  }
-}
-@media (min-width: 475px) {
-  .utility {
-    width: 100%;
-  }
-} */
 
-/* .utility {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-} */
+body::-webkit-scrollbar-thumb:hover {
+  background-color: var(--accent-blue);
+}
 
+/* Accessibility focus styles */
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
 
-/* *{
-  border: 1px solid red;
-} */
+/* Improved button focus states */
+button:focus-visible,
+a:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-radius: 4px;
+}
 
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Active navigation styles */
 .nav-items .li-item a.active::after {
   width: 100%;
 }
@@ -142,4 +123,83 @@ body::-webkit-scrollbar {
 /* Add styles for the active mobile link */
 .active-mobile-link {
   @apply text-[var(--accent-blue)] font-semibold; /* Example: use accent color and make font bolder */
+}
+
+/* Utility classes */
+.section-title {
+  @apply text-3xl md:text-5xl text-white font-bold relative text-center px-4 mb-8;
+}
+
+.section-title::after {
+  content: '';
+  @apply absolute w-3/5 h-1 bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1;
+  background-color: var(--accent-blue);
+}
+
+.card {
+  @apply border p-6 rounded-xl shadow-lg transition-all duration-300 backdrop-blur-sm;
+  border-color: var(--border-color);
+  background-color: rgba(26, 29, 36, 0.7);
+}
+
+.card:hover {
+  @apply shadow-xl transform scale-[1.01];
+  border-color: rgba(74, 144, 226, 0.5);
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive container */
+.container-fluid {
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 640px) {
+  .container-fluid {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-fluid {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-fluid {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container-fluid {
+    max-width: 1280px;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  body {
+    animation: none;
+  }
 }

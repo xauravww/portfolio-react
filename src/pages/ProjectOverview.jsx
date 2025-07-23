@@ -135,7 +135,7 @@ const ProjectOverview = ({ containerId }) => {
         </header>
         <button
           onClick={() => setIsModalOpen(true)}
-          className="filter-button p-2 border border-[var(--border-color)] bg-[var(--bg-dark)]/60 backdrop-blur-sm rounded-md hover:bg-[var(--border-color)] transition-colors"
+          className="filter-button p-2 border border-[var(--border-color)] bg-[#1A1D24]/60 backdrop-blur-sm rounded-md hover:bg-[var(--border-color)] transition-colors"
           title="Filter Projects"
         >
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[var(--text-light)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

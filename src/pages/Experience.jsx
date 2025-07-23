@@ -45,7 +45,7 @@ function Experience({ containerId }) {
         <div className="underline-below-header absolute w-3/5 h-1 bg-[var(--accent-blue)] bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1"></div>
       </header>
 
-      <div className="experience-content-box border border-[var(--border-color)] max-w-[75vw] mx-6 md:mx-8 p-4 text-[var(--text-light)] grid grid-cols-1 md:grid-cols-3 gap-4 z-[3] bg-[var(--bg-dark)]/70 backdrop-blur-sm rounded-xl opacity-0">
+      <div className="experience-content-box border border-[var(--border-color)] max-w-[75vw] mx-6 md:mx-8 p-4 text-[var(--text-light)] grid grid-cols-1 md:grid-cols-3 gap-4 z-[3] bg-[#1A1D24]/70 backdrop-blur-sm rounded-xl opacity-0">
          <div className="md:col-span-1 m-2 md:m-4 border-r border-[var(--border-color)] pr-4">
           {EXPERIENCEDATA.map((data) => (
             <div
@@ -53,7 +53,7 @@ function Experience({ containerId }) {
               className={`py-2 md:py-3 px-2 md:px-4 mt-2 md:mt-3 cursor-pointer rounded transition-colors duration-150 ${
                 showExperience === data.title
                   ? "border-l-4 border-[var(--accent-blue)] bg-[var(--border-color)] text-[var(--text-light)]"
-                  : "text-[var(--text-medium)] hover:text-[var(--text-light)] hover:bg-[var(--border-color)]/50"
+                  : "text-[var(--text-medium)] hover:text-[var(--text-light)] hover:bg-[#33373E]/50"
               }`}
               onClick={() => handleClick(data.title)}
             >

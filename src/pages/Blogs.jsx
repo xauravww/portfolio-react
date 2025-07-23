@@ -36,14 +36,14 @@ const Blogs = ({ containerId }) => {
         Blogs
         <div className="underline-below-header absolute w-3/5 h-1 bg-[var(--accent-blue)] bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
       </header>
-      <div className="blog-content rounded-xl max-w-[90vw] border border-[var(--border-color)] bg-[var(--bg-dark)]/70 backdrop-blur-sm p-4 h-1/2 sm:w-80 md:w-96 flex flex-col items-center justify-center text-2xl text-[var(--text-light)] text-center z-[3] font-oregano opacity-0">
+      <div className="blog-content rounded-xl max-w-[90vw] border border-[var(--border-color)] bg-[#1A1D24]/70 backdrop-blur-sm p-4 h-1/2 sm:w-80 md:w-96 flex flex-col items-center justify-center text-2xl text-[var(--text-light)] text-center z-[3] font-oregano opacity-0">
         Integration Coming Soon...
         <br />
         For now Visit my blog directly!
         <a
           href="https://xauravww.hashnode.dev"
           target="_blank"
-          className="bg-[var(--accent-blue)] text-[var(--bg-dark)] mt-5 font-extralight p-3 rounded hover:opacity-90 transition-opacity"
+          className="bg-[var(--accent-blue)] text-[#1A1D24] mt-5 font-extralight p-3 rounded hover:opacity-90 transition-opacity"
         >
           Blog Link
         </a>
